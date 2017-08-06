@@ -1,0 +1,596 @@
+@charset "UTF-8";
+/* ========================================================================
+ * General common styling
+ *
+ * ========================================================================
+ * Copyright 2016 Bootbites.com (unless otherwise stated)
+ * For license information see: http://bootbites.com/license
+ * ======================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
+
+a {
+  color: #382d91; }
+
+p {
+  line-height: 1.55;
+  color: #333;
+  font-family: "Lato", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; }
+
+h1 {
+  font-size: 62px; }
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 65px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 18px; }
+
+th, td {
+  text-align: center; }
+
+/* ==================================================
+  Custom
+  ================================================== */
+.location {
+  font-size: 30px;
+  color: #fff; }
+
+.social-nav {
+  min-width: 177px; }
+  .social-nav a {
+    font-size: 24px;
+    margin-left: 15px;
+    color: #fff; }
+
+.nav-wrapper {
+  background-color: #bc0b66;
+  padding-right: .9375rem;
+  padding-left: .9375rem;
+  margin-right: auto;
+  margin-left: auto; }
+
+.navbar {
+  background-color: #bc0b66; }
+
+.navbar .navbar-nav .nav-link, .navbar .navbar-brand, .nav {
+  font-family: "Lato", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  width: 100%; }
+
+.navbar-inverse .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(250,250,250, 1)' stroke-width='3' stroke-linecap='normal' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+
+.navbar-inverse .navbar-toggler {
+  border: none; }
+
+div .navbar .navbar-toggler-right {
+  font-size: 25px;
+  right: 0; }
+
+/* ==================================================
+  Elements
+  ================================================== */
+.btn {
+  background-color: #bc0b66;
+  font-family: "Lato", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 800;
+  color: #fff;
+  padding: 15px 45px;
+  border-radius: 50px; }
+  .btn:hover {
+    background-color: #382d91;
+    color: #fff; }
+
+.btn-ghost {
+  border: 3px solid #fff;
+  background-color: transparent; }
+  .btn-ghost:hover {
+    background-color: #fff;
+    color: #bc0b66; }
+
+section {
+  padding: 85px 0; }
+
+.card {
+  position: relative;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  overflow: hidden; }
+
+a:hover {
+  text-decoration: none; }
+
+p a:hover {
+  text-decoration: underline; }
+
+.scrolltop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #bc0b66;
+  color: #fff;
+  text-align: center;
+  font-size: 24px; }
+  .scrolltop:hover, .scrolltop:active, .scrolltop:focus {
+    color: #fff !important;
+    opacity: .75; }
+
+/* ==================================================
+  Header Styling
+  ================================================== */
+.hero {
+  position: relative;
+  background-image: url(../img/cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 50px 0;
+  color: #fff; }
+  .hero:after {
+    content: '';
+    z-index: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; }
+  .hero .container {
+    position: relative;
+    z-index: 1; }
+
+.hero-brand {
+  margin-bottom: 45px;
+  display: inline-block; }
+  .hero-brand:hover {
+    opacity: .75; }
+
+.tagline {
+  font-family: "Lato", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 19px;
+  margin: 45px 0 75px 0;
+  color: #fff; }
+
+.navbar {
+  border-radius: 0;
+  position: relative;
+  z-index: 500;
+  background-color: #bc0b66;
+  padding: 0; }
+  .navbar .navbar-toggler {
+    outline: none !important;
+    color: #fff;
+    font-size: 32px;
+    padding: 0;
+    margin-top: 4px; }
+  .navbar .navbar-brand {
+    margin-right: 45px;
+    padding: 0;
+    margin-top: 0;
+    width: auto; }
+  .navbar a {
+    font-family: "Lato", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-weight: 400;
+    color: #fff; }
+    .navbar a.nav-link {
+      padding: 20px 0;
+      margin-right: 15px;
+      position: relative; }
+      .navbar a.nav-link:before {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden; }
+      .navbar a.nav-link:hover {
+        color: rgba(255, 255, 255, 0.75); }
+      .navbar a.nav-link:hover:before {
+        opacity: 1;
+        visibility: visible; }
+
+.social-nav {
+  margin-top: 14px; }
+  .social-nav a {
+    font-size: 24px;
+    margin-left: 15px; }
+    .social-nav a:hover {
+      color: rgba(255, 255, 255, 0.75); }
+
+/* ==================================================
+  About Styling
+  ================================================== */
+.about-text {
+  text-align: left; }
+
+.stats-row {
+  margin-top: 65px; }
+
+.stats-col .circle {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  font-family: "Lato", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: 500;
+  color: #666;
+  border: 6px solid #bc0b66;
+  border-radius: 50%;
+  padding: 55px 25px 0 25px;
+  position: relative; }
+  .stats-col .circle .stats-no {
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    top: -25px;
+    right: -15px;
+    font-family: "Lato", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 18px;
+    background-color: #382d91;
+    position: absolute;
+    border-radius: 50%;
+    font-weight: 700; }
+
+/* ==================================================
+  Parallax Styling
+  ================================================== */
+.block {
+  color: #fff;
+  height: 490px;
+  overflow: hidden;
+  padding-top: 85px; }
+  .block h2 {
+    text-transform: uppercase;
+    margin-bottom: 15px; }
+  .block p {
+    color: #fff;
+    margin-bottom: 45px; }
+
+/* ==================================================
+  Features Styling
+  ================================================== */
+.features {
+  padding-top: 0;
+  padding-bottom: 45px; }
+  .features h2 {
+    color: #bc0b66; }
+  .features div.card {
+    display: block; }
+
+.feature-col {
+  display: table;
+  padding-bottom: 45px; }
+  .feature-col > div > div {
+    display: table-cell;
+    vertical-align: middle; }
+    .feature-col > div > div:last-child {
+      padding-left: 20px; }
+  .feature-col .feature-icon {
+    width: 70px;
+    height: 70px;
+    background: #bc0b66;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 50%;
+    display: inline-block; }
+  .feature-col h3 {
+    color: #bc0b66; }
+  .feature-col p {
+    font-family: "Lato", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-size: 14px;
+    color: #999; }
+
+/* ==================================================
+  Call-to-action Styling
+  ================================================== */
+.cta {
+  background-color: #bc0b66;
+  padding: 25px 0; }
+  .cta h2 {
+    margin-bottom: 5px; }
+  .cta h2,
+  .cta p {
+    color: #fff; }
+  .cta p {
+    margin-bottom: 0;
+    opacity: .75; }
+  .cta .btn-ghost {
+    position: relative;
+    top: 13px; }
+
+/* ==================================================
+  Portfolio Styling
+  ================================================== */
+.portfolio {
+  background-color: #edf6ff;
+  padding-bottom: 0; }
+  .portfolio h2 {
+    color: #bc0b66;
+    margin-bottom: 25px; }
+
+.portfolio-grid {
+  margin-top: 65px; }
+  .portfolio-grid .row {
+    margin: 0; }
+  .portfolio-grid .row > div {
+    padding: 0; }
+    .portfolio-grid .row > div .card img {
+      width: 100%; }
+    .portfolio-grid .row > div .card .portfolio-over {
+      position: absolute;
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      top: 0;
+      left: 0;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .portfolio-grid .row > div .card .portfolio-over > div {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
+      .portfolio-grid .row > div .card .portfolio-over .card-title {
+        color: #fff;
+        font-size: 30px; }
+      .portfolio-grid .row > div .card .portfolio-over .card-text {
+        color: #fff;
+        opacity: .75;
+        padding: 0 45px; }
+    .portfolio-grid .row > div .card:hover .portfolio-over {
+      opacity: 1;
+      visibility: visible; }
+
+/* ==================================================
+  Schedule Styling
+  ================================================== */
+.schedule .address {
+  font-weight: normal; }
+
+.schedule .class-cost-title {
+  margin-top: 1em; }
+
+/* ==================================================
+  Team Styling
+  ================================================== */
+.team h2 {
+  color: #bc0b66; }
+
+.team .col-sm-3 {
+  padding: 0; }
+
+.team .card > a {
+  display: block; }
+
+.team .card img {
+  width: 100%; }
+
+.team .card h4 {
+  color: #fff;
+  text-transform: uppercase; }
+
+.team .card p {
+  font-size: 11px;
+  color: #fff;
+  opacity: .75;
+  margin: 0;
+  padding: 0 35px; }
+
+.team .card .social-nav {
+  display: block;
+  margin-bottom: 45px; }
+  .team .card .social-nav a {
+    color: #fff;
+    font-size: 14px; }
+    .team .card .social-nav a:first-child {
+      margin-left: 0; }
+    .team .card .social-nav a:hover {
+      opacity: .75; }
+
+.team .card:hover .team-over {
+  opacity: 1;
+  visibility: visible; }
+
+.team .card:hover .card-title-wrap {
+  background-color: #bc0b66; }
+  .team .card:hover .card-title-wrap .card-title, .team .card:hover .card-title-wrap .card-text {
+    color: #fff; }
+
+.team .team-over {
+  padding-top: 45px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.team .card-title-wrap {
+  padding: 15px 25px;
+  position: relative;
+  z-index: 9;
+  background-color: #fff; }
+  .team .card-title-wrap .card-title, .team .card-title-wrap .card-text {
+    font-family: "Lato", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    display: block;
+    margin: 0; }
+  .team .card-title-wrap .card-title {
+    font-size: 24px;
+    color: #333; }
+  .team .card-title-wrap .card-text {
+    font-size: 18px;
+    color: #999; }
+
+/* ==================================================
+  Contact Page
+  =================================================== */
+#map {
+  min-height: 300px; }
+
+abbr i {
+  padding-right: 4px; }
+
+/* ==================================================
+  Footer Styling
+  ================================================== */
+.site-footer {
+  background-color: #102542;
+  padding: 65px 0 0 0; }
+  .site-footer h2, .site-footer p {
+    color: #fff; }
+  .site-footer p {
+    opacity: .75;
+    line-height: 2.0925; }
+  .site-footer h2,
+  .site-footer .btn {
+    margin-bottom: 25px; }
+  .site-footer .cta {
+    background-color: inherit;
+    padding: inherit;
+    margin-left: 0;
+    padding-left: 0; }
+    .site-footer .cta a {
+      color: white;
+      opacity: .75; }
+      .site-footer .cta a:hover {
+        opacity: 1; }
+    .site-footer .cta i {
+      padding-right: 4px; }
+  .site-footer .copyright-text a {
+    color: #fff; }
+    .site-footer .copyright-text a:hover {
+      opacity: 0.6; }
+  .site-footer .social-nav a {
+    color: #fff;
+    opacity: .25; }
+    .site-footer .social-nav a:hover {
+      opacity: 1; }
+    .site-footer .social-nav a:first-child {
+      margin-left: 0; }
+  .site-footer .bottom {
+    margin-top: 65px;
+    background-color: #0b1b32;
+    padding: 20px 0; }
+    .site-footer .bottom .list-inline, .site-footer .bottom p {
+      margin: 0; }
+    .site-footer .bottom .list-inline {
+      position: relative;
+      top: 5px; }
+      .site-footer .bottom .list-inline a {
+        color: #fff;
+        opacity: .25;
+        font-family: "Lato", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        margin-right: 15px; }
+        .site-footer .bottom .list-inline a:hover {
+          opacity: 1; }
+
+/* ==================================================
+  Responsive Styling
+  ================================================== */
+@media (max-width: 61.9em) {
+  section,
+  .block,
+  .cta {
+    padding: 35px 0; }
+  .features {
+    padding-bottom: 5px; }
+  p,
+  .block p {
+    margin: 0; }
+  .about-text p {
+    margin: 0 0 10px 0; }
+  .hero-brand {
+    margin-bottom: 35px; }
+  .tagline {
+    margin: 35px 0; }
+  h1 {
+    font-size: 32px;
+    margin: 0; }
+  h2,
+  .tagline {
+    font-size: 24px; }
+  h2 {
+    margin-bottom: 25px; }
+  .hero {
+    padding: 75px 0; }
+  .stats-col {
+    margin-bottom: 25px; }
+  .block {
+    height: auto; }
+  .feature-col {
+    padding-bottom: 30px; }
+  .portfolio-grid .card h3.card-title {
+    font-size: 18px !important; }
+  .portfolio-grid .card .card-text {
+    font-size: 13px; }
+  .team .team-over {
+    padding-top: 20px; }
+  .team .card .social-nav {
+    margin-bottom: 15px;
+    padding: 0; }
+  .site-footer .social-nav {
+    margin-bottom: 35px; }
+  .site-footer .list-inline {
+    text-align: center;
+    padding-bottom: 15px; }
+    .site-footer .list-inline li {
+      display: inline-block; } }
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 10px 0 !important; }
+    .navbar .navbar-brand {
+      margin: 0; }
+    .navbar #navbar-collapse {
+      padding-top: 10px;
+      float: left;
+      width: 100%; }
+    .navbar .nav-item {
+      width: 100%;
+      margin: 0 !important; }
+      .navbar .nav-item a {
+        display: block;
+        padding: 10px 0; }
+  .block {
+    padding-left: 30px;
+    padding-right: 30px; } }
+
+@media (max-width: 575px) {
+  .navbar {
+    width: 100%; } }
+
+@media (max-width: 543px) {
+  .team .miki-bio {
+    clear: both; } }
+
+
+
+/*# sourceMappingURL=app.css.map*/

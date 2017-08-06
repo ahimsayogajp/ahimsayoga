@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "schedule": "Schedule",
+    "instructors": "Instructors",
+    "contact": "Contact"
+  },
+  "home": {
+    "cta": "View Schedule",
+    "intro": "Join our traditional Shivam Yoga classes, proven to improve health on all levels of the body."
+  },
+  "about": {
+    "maintitle": "About Shivam Yoga",
+    "shivamyoga": {
+      "p1": "Shivam Yoga is a philosophical and holistic system. This traditional methodology respects the original source of Yoga knowledge which began between 7 and 10 thousands years ago in the Dravidian Civilization.",
+      "p2": "Shivam Yoga is grounded on two philosophic bases called Sankhya and Tantra.",
+      "sankhya": {
+        "title": "Sankhya",
+        "body": "Sankhya explains about the existence of life and the Universe based on Universal laws, mainly Karma and Dharma laws."
+      },
+      "tantra" : {
+        "title": "Tantra",
+        "body": "Tantra is a behavioural philosophy. Tantra means tool (Tra) of development (Tan). Tantra is also understood as an energetic philosophy, because it explains about the energetic physiology of the body and life. Sankhya and Tantra philosophies express the lives of Dravidian people."
+      },
+      "expression": "This expression is not religious or devotional."
+    },
+    "features": {
+      "title": "Sadhana: our practice",
+      "dharana": "The mental concentration state by which we aim to focus the mind, lowering the frequency of our thoughts.",
+      "pujas": "Pujas are realised through a transmission and a reception of energy. They are a spiritual but not devotional force.",
+      "pranayamas": "Breathing exercises providing a greater flow of pranic energy and health throughout all of the levels of our being.",
+      "asanas": "Mostly having names of animals or natural elements, through Asana we perfect ourselves as spiritual beings.",
+      "bandhas": "Energising exercises for the organs and glands, activating the chakras and awakening power and discipline.",
+      "kriyas": "Detoxification and purification exercises for the physical, energetic, emotional, mental and spiritual bodies.",
+      "yoganidra": "A process of relaxation and self-knowledge, calming the mind and the flux of the emotions.",
+      "mantras": "Non devotional chanting of mantras to propitiate and enter into a state of joy and happiness.",
+      "mudras": "Mudras are gestures and energetic expressions made with the hands, arms and sometimes, the body.",
+      "dhyana": "In meditation we achieve total concentration of the mind, the state of mind after Dharana has taken place."
+    }
+  },
+  "schedule": {
+    "title": "Class Schedule",
+    "intro": {
+      "p1": "Please check the correct location and　",
+      "p2": " and book at least 1 day in advance to avoid dissapointment."
+    },
+    "locations" : {
+      "title" : "Locations",
+      "ahimsa" : {
+        "title": "Ahimsa Center",
+        "address": "2 Chome 1-24, Ishibiki, Kanazawa"
+      },
+      "takigahara": {
+        "title": "Takigahara Farm",
+        "address": "Takigaharamachi O-66, Komatsu"
+      },
+      "kiboagaoka": {
+        "title": "喜多笑天 (Kitashoten)",
+        "address": "Kibogaoka 1-112, Komatsu"
+      }
+    },
+    "days": {
+      "mon": "M",
+      "tues": "T",
+      "wed": "W",
+      "thurs": "T",
+      "fri": "F",
+      "sat": "Sa",
+      "sun": "Su"
+    },
+    "pricing": {
+      "title": "Class Cost",
+      "class" : "class",
+      "classes": "classes",
+      "mins": "mins",
+      "dropin": "Drop-in",
+      "monthly": "Monthly"
+    }
+  },
+  "instructors": {
+    "title": "Instructors",
+    "connect" : "Connect with me",
+    "bios" : {
+      "paul": "Paul has 5 years experience giving Shivam Yoga classes in many countries worldwide.",
+      "miki": "Miki trained in Dublin, Ireland and Kerala, India, completing qualification in Shivam Yoga Dublin."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "location": {
+      "title": "Ahimsa Center",
+      "address": {
+        "line1": "2 Chome−1-24",
+        "line2": "Ishibiki, Kanazawa",
+        "line3": "Ishikawa Prefecture, 〒920-0935"
+      }
+    }
+  },
+  "footer": {
+    "contactus": "Contact Us",
+    "body" : "Anyone that practices Shivam Yoga seeks the improvement of consciousness as a focus of daily living. This is found by observing oneself. We observe the way we express ourselves through our experiences, so as to cultivate a renewed awareness of this world, Nature and the Universe."
+  }
+}
