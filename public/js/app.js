@@ -159,7 +159,19 @@ require.register("elm/App.elm", function(exports, require, module) {
 
 });
 
+;require.register("elm/Pages/Contact.elm", function(exports, require, module) {
+
+});
+
 ;require.register("elm/Pages/Home.elm", function(exports, require, module) {
+
+});
+
+;require.register("elm/Pages/Instructors.elm", function(exports, require, module) {
+
+});
+
+;require.register("elm/Pages/Schedule.elm", function(exports, require, module) {
 
 });
 

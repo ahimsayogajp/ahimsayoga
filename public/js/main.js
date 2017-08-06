@@ -9529,8 +9529,14 @@ var _evancz$url_parser$UrlParser$intParam = function (name) {
 var _user$project$Types$Model = function (a) {
 	return {currentPage: a};
 };
+var _user$project$Types$ContactEn = {ctor: 'ContactEn'};
+var _user$project$Types$Contact = {ctor: 'Contact'};
+var _user$project$Types$InstructorsEn = {ctor: 'InstructorsEn'};
+var _user$project$Types$Instructors = {ctor: 'Instructors'};
 var _user$project$Types$AboutEn = {ctor: 'AboutEn'};
 var _user$project$Types$About = {ctor: 'About'};
+var _user$project$Types$ScheduleEn = {ctor: 'ScheduleEn'};
+var _user$project$Types$Schedule = {ctor: 'Schedule'};
 var _user$project$Types$Home = {ctor: 'Home'};
 var _user$project$Types$LinkTo = function (a) {
 	return {ctor: 'LinkTo', _0: a};
@@ -9550,18 +9556,69 @@ var _user$project$Routing$route = _evancz$url_parser$UrlParser$oneOf(
 			ctor: '::',
 			_0: A2(
 				_evancz$url_parser$UrlParser$map,
-				_user$project$Types$About,
-				_evancz$url_parser$UrlParser$s('about')),
+				_user$project$Types$Schedule,
+				_evancz$url_parser$UrlParser$s('schedule')),
 			_1: {
 				ctor: '::',
 				_0: A2(
 					_evancz$url_parser$UrlParser$map,
-					_user$project$Types$AboutEn,
+					_user$project$Types$ScheduleEn,
 					A2(
 						_evancz$url_parser$UrlParser_ops['</>'],
 						_evancz$url_parser$UrlParser$s('en'),
-						_evancz$url_parser$UrlParser$s('about'))),
-				_1: {ctor: '[]'}
+						_evancz$url_parser$UrlParser$s('schedule'))),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_evancz$url_parser$UrlParser$map,
+						_user$project$Types$About,
+						_evancz$url_parser$UrlParser$s('about')),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_evancz$url_parser$UrlParser$map,
+							_user$project$Types$AboutEn,
+							A2(
+								_evancz$url_parser$UrlParser_ops['</>'],
+								_evancz$url_parser$UrlParser$s('en'),
+								_evancz$url_parser$UrlParser$s('about'))),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_evancz$url_parser$UrlParser$map,
+								_user$project$Types$Instructors,
+								_evancz$url_parser$UrlParser$s('instructors')),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_evancz$url_parser$UrlParser$map,
+									_user$project$Types$InstructorsEn,
+									A2(
+										_evancz$url_parser$UrlParser_ops['</>'],
+										_evancz$url_parser$UrlParser$s('en'),
+										_evancz$url_parser$UrlParser$s('instructors'))),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_evancz$url_parser$UrlParser$map,
+										_user$project$Types$Contact,
+										_evancz$url_parser$UrlParser$s('contact')),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_evancz$url_parser$UrlParser$map,
+											_user$project$Types$ContactEn,
+											A2(
+												_evancz$url_parser$UrlParser_ops['</>'],
+												_evancz$url_parser$UrlParser$s('en'),
+												_evancz$url_parser$UrlParser$s('contact'))),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	});
@@ -9623,8 +9680,20 @@ var _user$project$Pages_Home$update = function (model) {
 	return _elm_lang$html$Html$text('Home in a module');
 };
 
+var _user$project$Pages_Schedule$update = function (model) {
+	return _elm_lang$html$Html$text('Schedule in a module');
+};
+
 var _user$project$Pages_About$update = function (model) {
 	return _elm_lang$html$Html$text('About in a module');
+};
+
+var _user$project$Pages_Instructors$update = function (model) {
+	return _elm_lang$html$Html$text('Instructors in a module');
+};
+
+var _user$project$Pages_Contact$update = function (model) {
+	return _elm_lang$html$Html$text('Contact in a module');
 };
 
 var _user$project$View$render_page = function (model) {
@@ -9633,10 +9702,22 @@ var _user$project$View$render_page = function (model) {
 		switch (_p0.ctor) {
 			case 'Home':
 				return _user$project$Pages_Home$update(model);
+			case 'Schedule':
+				return _user$project$Pages_Schedule$update(model);
+			case 'ScheduleEn':
+				return _user$project$Pages_Schedule$update(model);
 			case 'About':
 				return _user$project$Pages_About$update(model);
-			default:
+			case 'AboutEn':
 				return _user$project$Pages_About$update(model);
+			case 'Instructors':
+				return _user$project$Pages_Instructors$update(model);
+			case 'InstructorsEn':
+				return _user$project$Pages_Instructors$update(model);
+			case 'Contact':
+				return _user$project$Pages_Contact$update(model);
+			default:
+				return _user$project$Pages_Contact$update(model);
 		}
 	}();
 	return A2(
@@ -9674,12 +9755,12 @@ var _user$project$View$render_menu = function (model) {
 					{
 						ctor: '::',
 						_0: _elm_lang$html$Html_Events$onClick(
-							_user$project$Types$LinkTo('/#/about')),
+							_user$project$Types$LinkTo('/#/schedule')),
 						_1: {ctor: '[]'}
 					},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html$text('About'),
+						_0: _elm_lang$html$Html$text('Schedule'),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
@@ -9689,15 +9770,111 @@ var _user$project$View$render_menu = function (model) {
 						{
 							ctor: '::',
 							_0: _elm_lang$html$Html_Events$onClick(
-								_user$project$Types$LinkTo('/#/en/about')),
+								_user$project$Types$LinkTo('/#/en/schedule')),
 							_1: {ctor: '[]'}
 						},
 						{
 							ctor: '::',
-							_0: _elm_lang$html$Html$text('AboutEn'),
+							_0: _elm_lang$html$Html$text('ScheduleEn'),
 							_1: {ctor: '[]'}
 						}),
-					_1: {ctor: '[]'}
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$button,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Events$onClick(
+									_user$project$Types$LinkTo('/#/about')),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('About'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$button,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Events$onClick(
+										_user$project$Types$LinkTo('/#/en/about')),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text('AboutEn'),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$button,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Events$onClick(
+											_user$project$Types$LinkTo('/#/instructors')),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text('Instructors'),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$button,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Events$onClick(
+												_user$project$Types$LinkTo('/#/en/instructors')),
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text('InstructorsEn'),
+											_1: {ctor: '[]'}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$button,
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Events$onClick(
+													_user$project$Types$LinkTo('/#/contact')),
+												_1: {ctor: '[]'}
+											},
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html$text('Contact'),
+												_1: {ctor: '[]'}
+											}),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$button,
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html_Events$onClick(
+														_user$project$Types$LinkTo('/#/en/contact')),
+													_1: {ctor: '[]'}
+												},
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html$text('ContactEn'),
+													_1: {ctor: '[]'}
+												}),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		});
