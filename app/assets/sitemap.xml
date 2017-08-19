@@ -4,25 +4,50 @@
     <loc>http://ahimsayoga.jp/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://ahimsayoga.jp/#/en"
+                 />
   </url>
   <url>
-    <loc>http://ahimsayoga.jp/?p=/about/</loc>
+    <loc>http://ahimsayoga.jp/#/about/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://ahimsayoga.jp/#/en/about"
+                 />
   </url>
   <url>
-    <loc>http://ahimsayoga.jp/?p=/schedule/</loc>
+    <loc>http://ahimsayoga.jp/#/schedule/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://ahimsayoga.jp/#/en/schedule"
+                 />
   </url>
   <url>
-    <loc>http://ahimsayoga.jp/?p=/instructors/</loc>
+    <loc>http://ahimsayoga.jp/#/instructors/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://ahimsayoga.jp/#/en/instructors"
+                 />
   </url>
   <url>
-    <loc>http://ahimsayoga.jp/?p=/contact/</loc>
+    <loc>http://ahimsayoga.jp/#/contact/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://ahimsayoga.jp/#/en/contact"
+                 />
   </url>
 </urlset>
