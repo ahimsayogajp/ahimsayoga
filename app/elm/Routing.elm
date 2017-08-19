@@ -11,6 +11,7 @@ route : Parser (Page -> a) a
 route =
     oneOf
         [ UrlParser.map Home (UrlParser.s "home")
+        , UrlParser.map HomeEn (UrlParser.s "en" </> UrlParser.s "home")
         , UrlParser.map Schedule (UrlParser.s "schedule")
         , UrlParser.map ScheduleEn (UrlParser.s "en" </> UrlParser.s "schedule")
         , UrlParser.map About (UrlParser.s "about")

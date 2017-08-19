@@ -24,17 +24,49 @@ view model =
 
 render_menu : Model -> Html Msg
 render_menu model =
-    div []
-        [ button [ onClick (LinkTo "/#/home") ] [ text "Home" ]
+    let
+        menu_content =
+            case model.currentPage of
+                HomeEn ->
+                    en_menu
+
+                ScheduleEn ->
+                    en_menu
+
+                AboutEn ->
+                    en_menu
+
+                InstructorsEn ->
+                    en_menu
+
+                ContactEn ->
+                    en_menu
+
+                _ ->
+                    jp_menu
+    in
+        div [] menu_content
+
+
+jp_menu : List (Html Msg)
+jp_menu =
+    [
+        button [ onClick (LinkTo "/#/home") ] [ text "Home" ]
         , button [ onClick (LinkTo "/#/schedule") ] [ text "Schedule" ]
-        , button [ onClick (LinkTo "/#/en/schedule") ] [ text "ScheduleEn" ]
         , button [ onClick (LinkTo "/#/about") ] [ text "About" ]
-        , button [ onClick (LinkTo "/#/en/about") ] [ text "AboutEn" ]
         , button [ onClick (LinkTo "/#/instructors") ] [ text "Instructors" ]
-        , button [ onClick (LinkTo "/#/en/instructors") ] [ text "InstructorsEn" ]
         , button [ onClick (LinkTo "/#/contact") ] [ text "Contact" ]
+    ]
+
+en_menu : List (Html Msg)
+en_menu =
+    [
+        button [ onClick (LinkTo "/#/en/home") ] [ text "HomeEn" ]
+        , button [ onClick (LinkTo "/#/en/schedule") ] [ text "ScheduleEn" ]
+        , button [ onClick (LinkTo "/#/en/about") ] [ text "AboutEn" ]
+        , button [ onClick (LinkTo "/#/en/instructors") ] [ text "InstructorsEn" ]
         , button [ onClick (LinkTo "/#/en/contact") ] [ text "ContactEn" ]
-        ]
+    ]
 
 
 render_page : Model -> Html Msg
@@ -43,6 +75,9 @@ render_page model =
         page_content =
             case model.currentPage of
                 Home ->
+                    Pages.Home.update model
+
+                HomeEn ->
                     Pages.Home.update model
 
                 Schedule ->

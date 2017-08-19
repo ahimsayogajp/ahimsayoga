@@ -2,6 +2,7 @@ module Types exposing (..)
 
 type Page
     = Home
+    | HomeEn
     | Schedule
     | ScheduleEn
     | About
