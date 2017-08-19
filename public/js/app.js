@@ -155,6 +155,14 @@ require.register("elm/App.elm", function(exports, require, module) {
 
 });
 
+;require.register("elm/Menu.elm", function(exports, require, module) {
+
+});
+
+;require.register("elm/Page.elm", function(exports, require, module) {
+
+});
+
 ;require.register("elm/Pages/About.elm", function(exports, require, module) {
 
 });
@@ -172,6 +180,10 @@ require.register("elm/App.elm", function(exports, require, module) {
 });
 
 ;require.register("elm/Pages/Schedule.elm", function(exports, require, module) {
+
+});
+
+;require.register("elm/Pages/page.elm", function(exports, require, module) {
 
 });
 
