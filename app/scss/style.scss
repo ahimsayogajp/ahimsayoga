@@ -12,6 +12,34 @@
 /* ==================================================
   Custom
   ================================================== */
+
+.lang-switcher-wrapper {
+    display: block;
+    text-align: center;
+    margin-top: 2em;
+    .lang-switcher {
+        display: inline-block;
+        border: 2px solid $color-primary;
+        padding: 0;
+        a {
+            color: $color-primary;
+            padding: 3px 8px 3px 5px;
+            &:first-child {
+                border-right: 1px solid $color-primary;
+                padding-right: 8px;
+            }
+            &:hover {
+                color: white;
+                background-color: $color-primary;
+            }
+        }
+    }
+}
+
+.btn-full {
+    margin-left: 10px;
+}
+
 .location {
   font-size: $font-size-large;
   color: #fff;
@@ -83,7 +111,7 @@ div .navbar .navbar-toggler-right {
     }
 }
 section {
-    padding: 85px 0;
+    padding: 50px 0;
 }
 .card {
     position: relative;

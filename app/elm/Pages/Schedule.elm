@@ -1,5 +1,6 @@
 module Pages.Schedule exposing (update)
 
+import LangWidget exposing (..)
 import Types exposing (..)
 import Html exposing (..)
 import Menu exposing (..)
@@ -13,6 +14,7 @@ update : Model -> Html Msg
 update model =
     div []
         [ div [class "nav-wrapper nav", id "nav"] [render_menu model]
+        , langswitcher model
         , Grid.container [] [ content model ]
         , render_footer model
         ]
