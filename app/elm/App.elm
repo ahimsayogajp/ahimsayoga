@@ -1,5 +1,9 @@
 module App exposing (init, update, subscriptions)
 
+import Bootstrap.Grid as Grid
+import Bootstrap.Navbar as Navbar exposing (attrs)
+import Bootstrap.Alert as Alert
+import Bootstrap.Grid.Col as Col
 import Navigation exposing (..)
 import UrlParser exposing (..)
 import Types exposing (..)
@@ -25,12 +29,16 @@ init location =
                 Just page ->
                     page
 
+        ( navbarState, navbarCmd ) =
+            Navbar.initialState NavbarMsg
+
         initialModel =
             { currentPage = page
+            , navbarState = navbarState
             , translations = initialTranslations
             }
     in
-        ( initialModel, Cmd.batch [ fetchTranslations TranslationsLoaded "/locale/translations.jp.json" ] )
+        ( initialModel, Cmd.batch [ navbarCmd, fetchTranslations TranslationsLoaded "/locale/translations.jp.json" ] )
 
 
 
@@ -50,6 +58,9 @@ update msg model =
 
         LinkTo path ->
             ( model, newUrl path )
+
+        NavbarMsg state ->
+            { model | navbarState = state } ! []
 
         TranslationsLoaded (Ok translations) ->
             ( { model | translations = translations },
