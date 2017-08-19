@@ -1,5 +1,7 @@
 module Routing exposing (..)
 
+import Html exposing (..)
+import Html.Attributes as A exposing (id, class, href, src, style, title, alt, type_, scope)
 import Navigation exposing (Location)
 import UrlParser exposing (..)
 import Types exposing (..)
@@ -21,6 +23,43 @@ route =
         , UrlParser.map Contact (UrlParser.s "contact")
         , UrlParser.map ContactEn (UrlParser.s "en" </> UrlParser.s "contact")
         ]
+
+linkAttrs : Page -> List (Html.Attribute Msg)
+linkAttrs page =
+    let
+        uri =
+            case page of
+                Home ->
+                    "/#/home"
+
+                HomeEn ->
+                    "/#/en/home"
+
+                Schedule ->
+                    "/#/schedule"
+
+                ScheduleEn ->
+                    "/#/en/schedule"
+
+                About ->
+                    "/#/about"
+
+                AboutEn ->
+                    "/#/en/about"
+
+                Instructors ->
+                    "/#/instructors"
+
+                InstructorsEn ->
+                    "/#/en/instructors"
+
+                Contact ->
+                    "/#/contact"
+
+                ContactEn ->
+                    "/#/en/contact"
+    in
+        [ A.href <| uri ]
 
 
 locFor : Location -> Msg

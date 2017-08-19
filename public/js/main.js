@@ -13906,6 +13906,38 @@ var _user$project$Types$GoTo = function (a) {
 	return {ctor: 'GoTo', _0: a};
 };
 
+var _user$project$Routing$linkAttrs = function (page) {
+	var uri = function () {
+		var _p0 = page;
+		switch (_p0.ctor) {
+			case 'Home':
+				return '/#/home';
+			case 'HomeEn':
+				return '/#/en/home';
+			case 'Schedule':
+				return '/#/schedule';
+			case 'ScheduleEn':
+				return '/#/en/schedule';
+			case 'About':
+				return '/#/about';
+			case 'AboutEn':
+				return '/#/en/about';
+			case 'Instructors':
+				return '/#/instructors';
+			case 'InstructorsEn':
+				return '/#/en/instructors';
+			case 'Contact':
+				return '/#/contact';
+			default:
+				return '/#/en/contact';
+		}
+	}();
+	return {
+		ctor: '::',
+		_0: _elm_lang$html$Html_Attributes$href(uri),
+		_1: {ctor: '[]'}
+	};
+};
 var _user$project$Routing$route = _evancz$url_parser$UrlParser$oneOf(
 	{
 		ctor: '::',
@@ -14097,100 +14129,12 @@ var _user$project$App$init = function (location) {
 	};
 };
 
-var _user$project$Pages_Home$update = function (model) {
-	return _elm_lang$html$Html$text('Home in a module');
-};
-
-var _user$project$Pages_Schedule$update = function (model) {
-	return _elm_lang$html$Html$text('Schedule in a module');
-};
-
-var _user$project$Pages_About$update = function (model) {
-	return _elm_lang$html$Html$text(
-		A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'nav.about'));
-};
-
-var _user$project$Pages_Instructors$update = function (model) {
-	return _elm_lang$html$Html$text('Instructors in a module');
-};
-
-var _user$project$Pages_Contact$update = function (model) {
-	return _elm_lang$html$Html$text('Contact in a module');
-};
-
-var _user$project$View$render_page = function (model) {
-	var page_content = function () {
-		var _p0 = model.currentPage;
-		switch (_p0.ctor) {
-			case 'Home':
-				return _user$project$Pages_Home$update(model);
-			case 'HomeEn':
-				return _user$project$Pages_Home$update(model);
-			case 'Schedule':
-				return _user$project$Pages_Schedule$update(model);
-			case 'ScheduleEn':
-				return _user$project$Pages_Schedule$update(model);
-			case 'About':
-				return _user$project$Pages_About$update(model);
-			case 'AboutEn':
-				return _user$project$Pages_About$update(model);
-			case 'Instructors':
-				return _user$project$Pages_Instructors$update(model);
-			case 'InstructorsEn':
-				return _user$project$Pages_Instructors$update(model);
-			case 'Contact':
-				return _user$project$Pages_Contact$update(model);
-			default:
-				return _user$project$Pages_Contact$update(model);
-		}
-	}();
-	return A2(
-		_elm_lang$html$Html$div,
-		{ctor: '[]'},
-		{
-			ctor: '::',
-			_0: page_content,
-			_1: {ctor: '[]'}
-		});
-};
-var _user$project$View$linkAttrs = function (page) {
-	var uri = function () {
-		var _p1 = page;
-		switch (_p1.ctor) {
-			case 'Home':
-				return '/#/home';
-			case 'HomeEn':
-				return '/#/en/home';
-			case 'Schedule':
-				return '/#/schedule';
-			case 'ScheduleEn':
-				return '/#/en/schedule';
-			case 'About':
-				return '/#/about';
-			case 'AboutEn':
-				return '/#/en/about';
-			case 'Instructors':
-				return '/#/instructors';
-			case 'InstructorsEn':
-				return '/#/en/instructors';
-			case 'Contact':
-				return '/#/contact';
-			default:
-				return '/#/en/contact';
-		}
-	}();
-	return {
-		ctor: '::',
-		_0: _elm_lang$html$Html_Attributes$href(uri),
-		_1: {ctor: '[]'}
-	};
-};
-var _user$project$View$en_menu = function (model) {
+var _user$project$Menu$en_menu = function (model) {
 	return {
 		ctor: '::',
 		_0: A2(
 			_rundis$elm_bootstrap$Bootstrap_Navbar$itemLink,
-			_user$project$View$linkAttrs(_user$project$Types$AboutEn),
+			_user$project$Routing$linkAttrs(_user$project$Types$AboutEn),
 			{
 				ctor: '::',
 				_0: _elm_lang$html$Html$text(
@@ -14201,7 +14145,7 @@ var _user$project$View$en_menu = function (model) {
 			ctor: '::',
 			_0: A2(
 				_rundis$elm_bootstrap$Bootstrap_Navbar$itemLink,
-				_user$project$View$linkAttrs(_user$project$Types$ScheduleEn),
+				_user$project$Routing$linkAttrs(_user$project$Types$ScheduleEn),
 				{
 					ctor: '::',
 					_0: _elm_lang$html$Html$text(
@@ -14212,7 +14156,7 @@ var _user$project$View$en_menu = function (model) {
 				ctor: '::',
 				_0: A2(
 					_rundis$elm_bootstrap$Bootstrap_Navbar$itemLink,
-					_user$project$View$linkAttrs(_user$project$Types$InstructorsEn),
+					_user$project$Routing$linkAttrs(_user$project$Types$InstructorsEn),
 					{
 						ctor: '::',
 						_0: _elm_lang$html$Html$text(
@@ -14223,7 +14167,7 @@ var _user$project$View$en_menu = function (model) {
 					ctor: '::',
 					_0: A2(
 						_rundis$elm_bootstrap$Bootstrap_Navbar$itemLink,
-						_user$project$View$linkAttrs(_user$project$Types$ContactEn),
+						_user$project$Routing$linkAttrs(_user$project$Types$ContactEn),
 						{
 							ctor: '::',
 							_0: _elm_lang$html$Html$text(
@@ -14236,12 +14180,12 @@ var _user$project$View$en_menu = function (model) {
 		}
 	};
 };
-var _user$project$View$jp_menu = function (model) {
+var _user$project$Menu$jp_menu = function (model) {
 	return {
 		ctor: '::',
 		_0: A2(
 			_rundis$elm_bootstrap$Bootstrap_Navbar$itemLink,
-			_user$project$View$linkAttrs(_user$project$Types$About),
+			_user$project$Routing$linkAttrs(_user$project$Types$About),
 			{
 				ctor: '::',
 				_0: _elm_lang$html$Html$text(
@@ -14252,7 +14196,7 @@ var _user$project$View$jp_menu = function (model) {
 			ctor: '::',
 			_0: A2(
 				_rundis$elm_bootstrap$Bootstrap_Navbar$itemLink,
-				_user$project$View$linkAttrs(_user$project$Types$Schedule),
+				_user$project$Routing$linkAttrs(_user$project$Types$Schedule),
 				{
 					ctor: '::',
 					_0: _elm_lang$html$Html$text(
@@ -14263,7 +14207,7 @@ var _user$project$View$jp_menu = function (model) {
 				ctor: '::',
 				_0: A2(
 					_rundis$elm_bootstrap$Bootstrap_Navbar$itemLink,
-					_user$project$View$linkAttrs(_user$project$Types$Instructors),
+					_user$project$Routing$linkAttrs(_user$project$Types$Instructors),
 					{
 						ctor: '::',
 						_0: _elm_lang$html$Html$text(
@@ -14274,7 +14218,7 @@ var _user$project$View$jp_menu = function (model) {
 					ctor: '::',
 					_0: A2(
 						_rundis$elm_bootstrap$Bootstrap_Navbar$itemLink,
-						_user$project$View$linkAttrs(_user$project$Types$Contact),
+						_user$project$Routing$linkAttrs(_user$project$Types$Contact),
 						{
 							ctor: '::',
 							_0: _elm_lang$html$Html$text(
@@ -14287,7 +14231,7 @@ var _user$project$View$jp_menu = function (model) {
 		}
 	};
 };
-var _user$project$View$socialMenu = _rundis$elm_bootstrap$Bootstrap_Navbar$customItem(
+var _user$project$Menu$socialMenu = _rundis$elm_bootstrap$Bootstrap_Navbar$customItem(
 	A2(
 		_elm_lang$html$Html$nav,
 		{
@@ -14406,22 +14350,22 @@ var _user$project$View$socialMenu = _rundis$elm_bootstrap$Bootstrap_Navbar$custo
 				}
 			}
 		}));
-var _user$project$View$render_menu = function (model) {
+var _user$project$Menu$render_menu = function (model) {
 	var item_links = function () {
-		var _p2 = model.currentPage;
-		switch (_p2.ctor) {
+		var _p0 = model.currentPage;
+		switch (_p0.ctor) {
 			case 'HomeEn':
-				return _user$project$View$en_menu(model);
+				return _user$project$Menu$en_menu(model);
 			case 'ScheduleEn':
-				return _user$project$View$en_menu(model);
+				return _user$project$Menu$en_menu(model);
 			case 'AboutEn':
-				return _user$project$View$en_menu(model);
+				return _user$project$Menu$en_menu(model);
 			case 'InstructorsEn':
-				return _user$project$View$en_menu(model);
+				return _user$project$Menu$en_menu(model);
 			case 'ContactEn':
-				return _user$project$View$en_menu(model);
+				return _user$project$Menu$en_menu(model);
 			default:
-				return _user$project$View$jp_menu(model);
+				return _user$project$Menu$jp_menu(model);
 		}
 	}();
 	return A2(
@@ -14431,7 +14375,7 @@ var _user$project$View$render_menu = function (model) {
 			_rundis$elm_bootstrap$Bootstrap_Navbar$customItems,
 			{
 				ctor: '::',
-				_0: _user$project$View$socialMenu,
+				_0: _user$project$Menu$socialMenu,
 				_1: {ctor: '[]'}
 			},
 			A2(
@@ -14468,6 +14412,64 @@ var _user$project$View$render_menu = function (model) {
 									'navbar-inverse',
 									_rundis$elm_bootstrap$Bootstrap_Navbar$config(_user$project$Types$NavbarMsg)))))))));
 };
+
+var _user$project$Pages_Home$update = function (model) {
+	return _elm_lang$html$Html$text('Home in a module');
+};
+
+var _user$project$Pages_Schedule$update = function (model) {
+	return _elm_lang$html$Html$text('Schedule in a module');
+};
+
+var _user$project$Pages_About$update = function (model) {
+	return _elm_lang$html$Html$text(
+		A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'nav.about'));
+};
+
+var _user$project$Pages_Instructors$update = function (model) {
+	return _elm_lang$html$Html$text('Instructors in a module');
+};
+
+var _user$project$Pages_Contact$update = function (model) {
+	return _elm_lang$html$Html$text('Contact in a module');
+};
+
+var _user$project$Page$render_page = function (model) {
+	var page_content = function () {
+		var _p0 = model.currentPage;
+		switch (_p0.ctor) {
+			case 'Home':
+				return _user$project$Pages_Home$update(model);
+			case 'HomeEn':
+				return _user$project$Pages_Home$update(model);
+			case 'Schedule':
+				return _user$project$Pages_Schedule$update(model);
+			case 'ScheduleEn':
+				return _user$project$Pages_Schedule$update(model);
+			case 'About':
+				return _user$project$Pages_About$update(model);
+			case 'AboutEn':
+				return _user$project$Pages_About$update(model);
+			case 'Instructors':
+				return _user$project$Pages_Instructors$update(model);
+			case 'InstructorsEn':
+				return _user$project$Pages_Instructors$update(model);
+			case 'Contact':
+				return _user$project$Pages_Contact$update(model);
+			default:
+				return _user$project$Pages_Contact$update(model);
+		}
+	}();
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: page_content,
+			_1: {ctor: '[]'}
+		});
+};
+
 var _user$project$View$view = function (model) {
 	return A2(
 		_elm_lang$html$Html$div,
@@ -14484,10 +14486,10 @@ var _user$project$View$view = function (model) {
 				}),
 			_1: {
 				ctor: '::',
-				_0: _user$project$View$render_menu(model),
+				_0: _user$project$Menu$render_menu(model),
 				_1: {
 					ctor: '::',
-					_0: _user$project$View$render_page(model),
+					_0: _user$project$Page$render_page(model),
 					_1: {ctor: '[]'}
 				}
 			}
