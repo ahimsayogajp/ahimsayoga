@@ -53,11 +53,35 @@ update msg model =
 
         TranslationsLoaded (Ok translations) ->
             ( { model | translations = translations },
-                Cmd.none
+                fetchLang model
             )
 
         TranslationsLoaded (Err _) ->
             ( model, Cmd.none )
+
+
+-- LOAD CORRECT LANG PER ROUTE
+
+fetchLang : Model -> Cmd Msg
+fetchLang model =
+    case model.currentPage of
+        HomeEn ->
+            fetchTranslations TranslationsLoaded "/locale/translations.en.json"
+
+        ScheduleEn ->
+            fetchTranslations TranslationsLoaded "/locale/translations.en.json"
+
+        AboutEn ->
+            fetchTranslations TranslationsLoaded "/locale/translations.en.json"
+
+        InstructorsEn ->
+            fetchTranslations TranslationsLoaded "/locale/translations.en.json"
+
+        ContactEn ->
+            fetchTranslations TranslationsLoaded "/locale/translations.en.json"
+
+        _ ->
+            fetchTranslations TranslationsLoaded "/locale/translations.jp.json"
 
 
 -- SUBSCRIPTIONS

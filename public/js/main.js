@@ -9965,13 +9965,30 @@ var _user$project$Routing$locFor = function (location) {
 var _user$project$App$subscriptions = function (model) {
 	return _elm_lang$core$Platform_Sub$none;
 };
+var _user$project$App$fetchLang = function (model) {
+	var _p0 = model.currentPage;
+	switch (_p0.ctor) {
+		case 'HomeEn':
+			return A2(_ChristophP$elm_i18next$I18Next$fetchTranslations, _user$project$Types$TranslationsLoaded, '/locale/translations.en.json');
+		case 'ScheduleEn':
+			return A2(_ChristophP$elm_i18next$I18Next$fetchTranslations, _user$project$Types$TranslationsLoaded, '/locale/translations.en.json');
+		case 'AboutEn':
+			return A2(_ChristophP$elm_i18next$I18Next$fetchTranslations, _user$project$Types$TranslationsLoaded, '/locale/translations.en.json');
+		case 'InstructorsEn':
+			return A2(_ChristophP$elm_i18next$I18Next$fetchTranslations, _user$project$Types$TranslationsLoaded, '/locale/translations.en.json');
+		case 'ContactEn':
+			return A2(_ChristophP$elm_i18next$I18Next$fetchTranslations, _user$project$Types$TranslationsLoaded, '/locale/translations.en.json');
+		default:
+			return A2(_ChristophP$elm_i18next$I18Next$fetchTranslations, _user$project$Types$TranslationsLoaded, '/locale/translations.jp.json');
+	}
+};
 var _user$project$App$update = F2(
 	function (msg, model) {
-		var _p0 = msg;
-		switch (_p0.ctor) {
+		var _p1 = msg;
+		switch (_p1.ctor) {
 			case 'GoTo':
-				var _p1 = _p0._0;
-				if (_p1.ctor === 'Nothing') {
+				var _p2 = _p1._0;
+				if (_p2.ctor === 'Nothing') {
 					return {
 						ctor: '_Tuple2',
 						_0: _elm_lang$core$Native_Utils.update(
@@ -9984,7 +10001,7 @@ var _user$project$App$update = F2(
 						ctor: '_Tuple2',
 						_0: _elm_lang$core$Native_Utils.update(
 							model,
-							{currentPage: _p1._0}),
+							{currentPage: _p2._0}),
 						_1: _elm_lang$core$Platform_Cmd$none
 					};
 				}
@@ -9992,16 +10009,16 @@ var _user$project$App$update = F2(
 				return {
 					ctor: '_Tuple2',
 					_0: model,
-					_1: _elm_lang$navigation$Navigation$newUrl(_p0._0)
+					_1: _elm_lang$navigation$Navigation$newUrl(_p1._0)
 				};
 			default:
-				if (_p0._0.ctor === 'Ok') {
+				if (_p1._0.ctor === 'Ok') {
 					return {
 						ctor: '_Tuple2',
 						_0: _elm_lang$core$Native_Utils.update(
 							model,
-							{translations: _p0._0._0}),
-						_1: _elm_lang$core$Platform_Cmd$none
+							{translations: _p1._0._0}),
+						_1: _user$project$App$fetchLang(model)
 					};
 				} else {
 					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
@@ -10010,11 +10027,11 @@ var _user$project$App$update = F2(
 	});
 var _user$project$App$init = function (location) {
 	var page = function () {
-		var _p2 = A2(_evancz$url_parser$UrlParser$parseHash, _user$project$Routing$route, location);
-		if (_p2.ctor === 'Nothing') {
+		var _p3 = A2(_evancz$url_parser$UrlParser$parseHash, _user$project$Routing$route, location);
+		if (_p3.ctor === 'Nothing') {
 			return _user$project$Types$Home;
 		} else {
-			return _p2._0;
+			return _p3._0;
 		}
 	}();
 	var initialModel = {currentPage: page, translations: _ChristophP$elm_i18next$I18Next$initialTranslations};
