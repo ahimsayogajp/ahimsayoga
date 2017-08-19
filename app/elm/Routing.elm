@@ -12,8 +12,8 @@ import Types exposing (..)
 route : Parser (Page -> a) a
 route =
     oneOf
-        [ UrlParser.map Home (UrlParser.s "home")
-        , UrlParser.map HomeEn (UrlParser.s "en" </> UrlParser.s "home")
+        [ UrlParser.map Home (UrlParser.s "")
+        , UrlParser.map HomeEn (UrlParser.s "en")
         , UrlParser.map Schedule (UrlParser.s "schedule")
         , UrlParser.map ScheduleEn (UrlParser.s "en" </> UrlParser.s "schedule")
         , UrlParser.map About (UrlParser.s "about")
@@ -30,10 +30,10 @@ linkAttrs page =
         uri =
             case page of
                 Home ->
-                    "/#/home"
+                    "/#"
 
                 HomeEn ->
-                    "/#/en/home"
+                    "/#/en"
 
                 Schedule ->
                     "/#/schedule"
