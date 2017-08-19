@@ -14643,6 +14643,58 @@ var _user$project$Footer$render_footer = function (model) {
 		});
 };
 
+var _user$project$LangWidget$langswitcher = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class('lang-switcher-wrapper'),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('lang-switcher'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$a,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$href('/#/schedule'),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('日本語'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$a,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$href('/#/en/schedule'),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('English'),
+								_1: {ctor: '[]'}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
+
 var _user$project$Menu$en_menu = function (model) {
 	return {
 		ctor: '::',
@@ -15088,11 +15140,29 @@ var _user$project$Pages_Home$content = function (model) {
 																		},
 																		{
 																			ctor: '::',
-																			_0: _elm_lang$html$Html$text(
-																				A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'home.cta')),
+																			_0: _elm_lang$html$Html$text('スケジュール'),
 																			_1: {ctor: '[]'}
 																		}),
-																	_1: {ctor: '[]'}
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$a,
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$class('btn btn-full'),
+																				_1: {
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Attributes$href('/#/en/schedule'),
+																					_1: {ctor: '[]'}
+																				}
+																			},
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html$text('Schedule'),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
 																}
 															}
 														}
@@ -15899,18 +15969,22 @@ var _user$project$Pages_Schedule$update = function (model) {
 				}),
 			_1: {
 				ctor: '::',
-				_0: A2(
-					_rundis$elm_bootstrap$Bootstrap_Grid$container,
-					{ctor: '[]'},
-					{
-						ctor: '::',
-						_0: _user$project$Pages_Schedule$content(model),
-						_1: {ctor: '[]'}
-					}),
+				_0: _user$project$LangWidget$langswitcher(model),
 				_1: {
 					ctor: '::',
-					_0: _user$project$Footer$render_footer(model),
-					_1: {ctor: '[]'}
+					_0: A2(
+						_rundis$elm_bootstrap$Bootstrap_Grid$container,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _user$project$Pages_Schedule$content(model),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _user$project$Footer$render_footer(model),
+						_1: {ctor: '[]'}
+					}
 				}
 			}
 		});
@@ -16984,18 +17058,22 @@ var _user$project$Pages_About$update = function (model) {
 				}),
 			_1: {
 				ctor: '::',
-				_0: A2(
-					_rundis$elm_bootstrap$Bootstrap_Grid$container,
-					{ctor: '[]'},
-					{
-						ctor: '::',
-						_0: _user$project$Pages_About$content(model),
-						_1: {ctor: '[]'}
-					}),
+				_0: _user$project$LangWidget$langswitcher(model),
 				_1: {
 					ctor: '::',
-					_0: _user$project$Footer$render_footer(model),
-					_1: {ctor: '[]'}
+					_0: A2(
+						_rundis$elm_bootstrap$Bootstrap_Grid$container,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _user$project$Pages_About$content(model),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _user$project$Footer$render_footer(model),
+						_1: {ctor: '[]'}
+					}
 				}
 			}
 		});
@@ -17540,18 +17618,22 @@ var _user$project$Pages_Instructors$update = function (model) {
 				}),
 			_1: {
 				ctor: '::',
-				_0: A2(
-					_rundis$elm_bootstrap$Bootstrap_Grid$container,
-					{ctor: '[]'},
-					{
-						ctor: '::',
-						_0: _user$project$Pages_Instructors$content(model),
-						_1: {ctor: '[]'}
-					}),
+				_0: _user$project$LangWidget$langswitcher(model),
 				_1: {
 					ctor: '::',
-					_0: _user$project$Footer$render_footer(model),
-					_1: {ctor: '[]'}
+					_0: A2(
+						_rundis$elm_bootstrap$Bootstrap_Grid$container,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _user$project$Pages_Instructors$content(model),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _user$project$Footer$render_footer(model),
+						_1: {ctor: '[]'}
+					}
 				}
 			}
 		});
@@ -17779,18 +17861,22 @@ var _user$project$Pages_Contact$update = function (model) {
 				}),
 			_1: {
 				ctor: '::',
-				_0: A2(
-					_rundis$elm_bootstrap$Bootstrap_Grid$container,
-					{ctor: '[]'},
-					{
-						ctor: '::',
-						_0: _user$project$Pages_Contact$content(model),
-						_1: {ctor: '[]'}
-					}),
+				_0: _user$project$LangWidget$langswitcher(model),
 				_1: {
 					ctor: '::',
-					_0: _user$project$Footer$render_footer(model),
-					_1: {ctor: '[]'}
+					_0: A2(
+						_rundis$elm_bootstrap$Bootstrap_Grid$container,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _user$project$Pages_Contact$content(model),
+							_1: {ctor: '[]'}
+						}),
+					_1: {
+						ctor: '::',
+						_0: _user$project$Footer$render_footer(model),
+						_1: {ctor: '[]'}
+					}
 				}
 			}
 		});

@@ -36,6 +36,27 @@ th, td {
 /* ==================================================
   Custom
   ================================================== */
+.lang-switcher-wrapper {
+  display: block;
+  text-align: center;
+  margin-top: 2em; }
+  .lang-switcher-wrapper .lang-switcher {
+    display: inline-block;
+    border: 2px solid #bc0b66;
+    padding: 0; }
+    .lang-switcher-wrapper .lang-switcher a {
+      color: #bc0b66;
+      padding: 3px 8px 3px 5px; }
+      .lang-switcher-wrapper .lang-switcher a:first-child {
+        border-right: 1px solid #bc0b66;
+        padding-right: 8px; }
+      .lang-switcher-wrapper .lang-switcher a:hover {
+        color: white;
+        background-color: #bc0b66; }
+
+.btn-full {
+  margin-left: 10px; }
+
 .location {
   font-size: 30px;
   color: #fff; }
@@ -95,7 +116,7 @@ div .navbar .navbar-toggler-right {
     color: #bc0b66; }
 
 section {
-  padding: 85px 0; }
+  padding: 50px 0; }
 
 .card {
   position: relative;
