@@ -5694,6 +5694,13 @@ var _elm_lang$core$Platform$Task = {ctor: 'Task'};
 var _elm_lang$core$Platform$ProcessId = {ctor: 'ProcessId'};
 var _elm_lang$core$Platform$Router = {ctor: 'Router'};
 
+var _ChristophP$elm_i18next$Data$Leaf = function (a) {
+	return {ctor: 'Leaf', _0: a};
+};
+var _ChristophP$elm_i18next$Data$Branch = function (a) {
+	return {ctor: 'Branch', _0: a};
+};
+
 var _elm_lang$core$Json_Decode$null = _elm_lang$core$Native_Json.decodeNull;
 var _elm_lang$core$Json_Decode$value = _elm_lang$core$Native_Json.decodePrimitive('value');
 var _elm_lang$core$Json_Decode$andThen = _elm_lang$core$Native_Json.andThen;
@@ -6529,6 +6536,319 @@ var _elm_lang$http$Http$StringPart = F2(
 		return {ctor: 'StringPart', _0: a, _1: b};
 	});
 var _elm_lang$http$Http$stringPart = _elm_lang$http$Http$StringPart;
+
+//import Maybe, Native.List //
+
+var _elm_lang$core$Native_Regex = function() {
+
+function escape(str)
+{
+	return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+}
+function caseInsensitive(re)
+{
+	return new RegExp(re.source, 'gi');
+}
+function regex(raw)
+{
+	return new RegExp(raw, 'g');
+}
+
+function contains(re, string)
+{
+	return string.match(re) !== null;
+}
+
+function find(n, re, str)
+{
+	n = n.ctor === 'All' ? Infinity : n._0;
+	var out = [];
+	var number = 0;
+	var string = str;
+	var lastIndex = re.lastIndex;
+	var prevLastIndex = -1;
+	var result;
+	while (number++ < n && (result = re.exec(string)))
+	{
+		if (prevLastIndex === re.lastIndex) break;
+		var i = result.length - 1;
+		var subs = new Array(i);
+		while (i > 0)
+		{
+			var submatch = result[i];
+			subs[--i] = submatch === undefined
+				? _elm_lang$core$Maybe$Nothing
+				: _elm_lang$core$Maybe$Just(submatch);
+		}
+		out.push({
+			match: result[0],
+			submatches: _elm_lang$core$Native_List.fromArray(subs),
+			index: result.index,
+			number: number
+		});
+		prevLastIndex = re.lastIndex;
+	}
+	re.lastIndex = lastIndex;
+	return _elm_lang$core$Native_List.fromArray(out);
+}
+
+function replace(n, re, replacer, string)
+{
+	n = n.ctor === 'All' ? Infinity : n._0;
+	var count = 0;
+	function jsReplacer(match)
+	{
+		if (count++ >= n)
+		{
+			return match;
+		}
+		var i = arguments.length - 3;
+		var submatches = new Array(i);
+		while (i > 0)
+		{
+			var submatch = arguments[i];
+			submatches[--i] = submatch === undefined
+				? _elm_lang$core$Maybe$Nothing
+				: _elm_lang$core$Maybe$Just(submatch);
+		}
+		return replacer({
+			match: match,
+			submatches: _elm_lang$core$Native_List.fromArray(submatches),
+			index: arguments[arguments.length - 2],
+			number: count
+		});
+	}
+	return string.replace(re, jsReplacer);
+}
+
+function split(n, re, str)
+{
+	n = n.ctor === 'All' ? Infinity : n._0;
+	if (n === Infinity)
+	{
+		return _elm_lang$core$Native_List.fromArray(str.split(re));
+	}
+	var string = str;
+	var result;
+	var out = [];
+	var start = re.lastIndex;
+	var restoreLastIndex = re.lastIndex;
+	while (n--)
+	{
+		if (!(result = re.exec(string))) break;
+		out.push(string.slice(start, result.index));
+		start = re.lastIndex;
+	}
+	out.push(string.slice(start));
+	re.lastIndex = restoreLastIndex;
+	return _elm_lang$core$Native_List.fromArray(out);
+}
+
+return {
+	regex: regex,
+	caseInsensitive: caseInsensitive,
+	escape: escape,
+
+	contains: F2(contains),
+	find: F3(find),
+	replace: F4(replace),
+	split: F3(split)
+};
+
+}();
+
+var _elm_lang$core$Regex$split = _elm_lang$core$Native_Regex.split;
+var _elm_lang$core$Regex$replace = _elm_lang$core$Native_Regex.replace;
+var _elm_lang$core$Regex$find = _elm_lang$core$Native_Regex.find;
+var _elm_lang$core$Regex$contains = _elm_lang$core$Native_Regex.contains;
+var _elm_lang$core$Regex$caseInsensitive = _elm_lang$core$Native_Regex.caseInsensitive;
+var _elm_lang$core$Regex$regex = _elm_lang$core$Native_Regex.regex;
+var _elm_lang$core$Regex$escape = _elm_lang$core$Native_Regex.escape;
+var _elm_lang$core$Regex$Match = F4(
+	function (a, b, c, d) {
+		return {match: a, submatches: b, index: c, number: d};
+	});
+var _elm_lang$core$Regex$Regex = {ctor: 'Regex'};
+var _elm_lang$core$Regex$AtMost = function (a) {
+	return {ctor: 'AtMost', _0: a};
+};
+var _elm_lang$core$Regex$All = {ctor: 'All'};
+
+var _ChristophP$elm_i18next$I18Next$tf = F2(
+	function (translationsList, key) {
+		var _p0 = translationsList;
+		if (_p0.ctor === '::') {
+			return A2(
+				_elm_lang$core$Maybe$withDefault,
+				A2(_ChristophP$elm_i18next$I18Next$tf, _p0._1, key),
+				A2(_elm_lang$core$Dict$get, key, _p0._0._0));
+		} else {
+			return key;
+		}
+	});
+var _ChristophP$elm_i18next$I18Next$delimsToTuple = function (delims) {
+	var _p1 = delims;
+	switch (_p1.ctor) {
+		case 'Curly':
+			return {ctor: '_Tuple2', _0: '{{', _1: '}}'};
+		case 'Underscore':
+			return {ctor: '_Tuple2', _0: '__', _1: '__'};
+		default:
+			return _p1._0;
+	}
+};
+var _ChristophP$elm_i18next$I18Next$replaceMatch = F2(
+	function (replacements, _p2) {
+		var _p3 = _p2;
+		var _p5 = _p3.match;
+		var _p4 = _p3.submatches;
+		if (_p4.ctor === '::') {
+			return A2(
+				_elm_lang$core$Maybe$withDefault,
+				_p5,
+				A2(
+					_elm_lang$core$Maybe$andThen,
+					function (name) {
+						return A2(
+							_elm_lang$core$Dict$get,
+							name,
+							_elm_lang$core$Dict$fromList(replacements));
+					},
+					_p4._0));
+		} else {
+			return _p5;
+		}
+	});
+var _ChristophP$elm_i18next$I18Next$placeholderRegex = function (delims) {
+	var _p6 = _ChristophP$elm_i18next$I18Next$delimsToTuple(delims);
+	var startDelim = _p6._0;
+	var endDelim = _p6._1;
+	return _elm_lang$core$Regex$regex(
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			_elm_lang$core$Regex$escape(startDelim),
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				'(.*?)',
+				_elm_lang$core$Regex$escape(endDelim))));
+};
+var _ChristophP$elm_i18next$I18Next$tr = F4(
+	function (_p7, delims, key, replacements) {
+		var _p8 = _p7;
+		return A2(
+			_elm_lang$core$Maybe$withDefault,
+			key,
+			A2(
+				_elm_lang$core$Maybe$map,
+				A3(
+					_elm_lang$core$Regex$replace,
+					_elm_lang$core$Regex$All,
+					_ChristophP$elm_i18next$I18Next$placeholderRegex(delims),
+					_ChristophP$elm_i18next$I18Next$replaceMatch(replacements)),
+				A2(_elm_lang$core$Dict$get, key, _p8._0)));
+	});
+var _ChristophP$elm_i18next$I18Next$trf = F4(
+	function (translationsList, delims, key, replacements) {
+		var _p9 = translationsList;
+		if (_p9.ctor === '::') {
+			return A2(
+				_elm_lang$core$Maybe$withDefault,
+				A4(_ChristophP$elm_i18next$I18Next$trf, _p9._1, delims, key, replacements),
+				A2(
+					_elm_lang$core$Maybe$map,
+					A3(
+						_elm_lang$core$Regex$replace,
+						_elm_lang$core$Regex$All,
+						_ChristophP$elm_i18next$I18Next$placeholderRegex(delims),
+						_ChristophP$elm_i18next$I18Next$replaceMatch(replacements)),
+					A2(_elm_lang$core$Dict$get, key, _p9._0._0)));
+		} else {
+			return key;
+		}
+	});
+var _ChristophP$elm_i18next$I18Next$t = F2(
+	function (_p10, key) {
+		var _p11 = _p10;
+		return A2(
+			_elm_lang$core$Maybe$withDefault,
+			key,
+			A2(_elm_lang$core$Dict$get, key, _p11._0));
+	});
+var _ChristophP$elm_i18next$I18Next$foldTree = F3(
+	function (initialValue, dict, namespace) {
+		return A3(
+			_elm_lang$core$Dict$foldl,
+			F3(
+				function (key, val, acc) {
+					var newNamespace = function (key) {
+						return _elm_lang$core$String$isEmpty(namespace) ? key : A2(
+							_elm_lang$core$Basics_ops['++'],
+							namespace,
+							A2(_elm_lang$core$Basics_ops['++'], '.', key));
+					};
+					var _p12 = val;
+					if (_p12.ctor === 'Leaf') {
+						return A3(
+							_elm_lang$core$Dict$insert,
+							newNamespace(key),
+							_p12._0,
+							acc);
+					} else {
+						return A3(
+							_ChristophP$elm_i18next$I18Next$foldTree,
+							acc,
+							_p12._0,
+							newNamespace(key));
+					}
+				}),
+			initialValue,
+			dict);
+	});
+var _ChristophP$elm_i18next$I18Next$decodeTree = _elm_lang$core$Json_Decode$oneOf(
+	{
+		ctor: '::',
+		_0: A2(_elm_lang$core$Json_Decode$map, _ChristophP$elm_i18next$Data$Leaf, _elm_lang$core$Json_Decode$string),
+		_1: {
+			ctor: '::',
+			_0: _elm_lang$core$Json_Decode$lazy(
+				function (_p13) {
+					return A2(
+						_elm_lang$core$Json_Decode$map,
+						_ChristophP$elm_i18next$Data$Branch,
+						_elm_lang$core$Json_Decode$dict(_ChristophP$elm_i18next$I18Next$decodeTree));
+				}),
+			_1: {ctor: '[]'}
+		}
+	});
+var _ChristophP$elm_i18next$I18Next$Translations = function (a) {
+	return {ctor: 'Translations', _0: a};
+};
+var _ChristophP$elm_i18next$I18Next$initialTranslations = _ChristophP$elm_i18next$I18Next$Translations(_elm_lang$core$Dict$empty);
+var _ChristophP$elm_i18next$I18Next$mapTreeToDict = function (tree) {
+	var _p14 = tree;
+	if (_p14.ctor === 'Branch') {
+		return _ChristophP$elm_i18next$I18Next$Translations(
+			A3(_ChristophP$elm_i18next$I18Next$foldTree, _elm_lang$core$Dict$empty, _p14._0, ''));
+	} else {
+		return _ChristophP$elm_i18next$I18Next$initialTranslations;
+	}
+};
+var _ChristophP$elm_i18next$I18Next$decodeTranslations = A2(_elm_lang$core$Json_Decode$map, _ChristophP$elm_i18next$I18Next$mapTreeToDict, _ChristophP$elm_i18next$I18Next$decodeTree);
+var _ChristophP$elm_i18next$I18Next$translationRequest = function (url) {
+	return A2(_elm_lang$http$Http$get, url, _ChristophP$elm_i18next$I18Next$decodeTranslations);
+};
+var _ChristophP$elm_i18next$I18Next$fetchTranslations = F2(
+	function (msg, url) {
+		return A2(
+			_elm_lang$http$Http$send,
+			msg,
+			_ChristophP$elm_i18next$I18Next$translationRequest(url));
+	});
+var _ChristophP$elm_i18next$I18Next$Custom = function (a) {
+	return {ctor: 'Custom', _0: a};
+};
+var _ChristophP$elm_i18next$I18Next$Underscore = {ctor: 'Underscore'};
+var _ChristophP$elm_i18next$I18Next$Curly = {ctor: 'Curly'};
 
 var _elm_lang$core$Process$kill = _elm_lang$core$Native_Scheduler.kill;
 var _elm_lang$core$Process$sleep = _elm_lang$core$Native_Scheduler.sleep;
@@ -9526,9 +9846,10 @@ var _evancz$url_parser$UrlParser$intParam = function (name) {
 	return A2(_evancz$url_parser$UrlParser$customParam, name, _evancz$url_parser$UrlParser$intParamHelp);
 };
 
-var _user$project$Types$Model = function (a) {
-	return {currentPage: a};
-};
+var _user$project$Types$Model = F2(
+	function (a, b) {
+		return {currentPage: a, translations: b};
+	});
 var _user$project$Types$ContactEn = {ctor: 'ContactEn'};
 var _user$project$Types$Contact = {ctor: 'Contact'};
 var _user$project$Types$InstructorsEn = {ctor: 'InstructorsEn'};
@@ -9539,6 +9860,9 @@ var _user$project$Types$ScheduleEn = {ctor: 'ScheduleEn'};
 var _user$project$Types$Schedule = {ctor: 'Schedule'};
 var _user$project$Types$HomeEn = {ctor: 'HomeEn'};
 var _user$project$Types$Home = {ctor: 'Home'};
+var _user$project$Types$TranslationsLoaded = function (a) {
+	return {ctor: 'TranslationsLoaded', _0: a};
+};
 var _user$project$Types$LinkTo = function (a) {
 	return {ctor: 'LinkTo', _0: a};
 };
@@ -9644,31 +9968,44 @@ var _user$project$App$subscriptions = function (model) {
 var _user$project$App$update = F2(
 	function (msg, model) {
 		var _p0 = msg;
-		if (_p0.ctor === 'GoTo') {
-			var _p1 = _p0._0;
-			if (_p1.ctor === 'Nothing') {
+		switch (_p0.ctor) {
+			case 'GoTo':
+				var _p1 = _p0._0;
+				if (_p1.ctor === 'Nothing') {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{currentPage: _user$project$Types$Home}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{currentPage: _p1._0}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				}
+			case 'LinkTo':
 				return {
 					ctor: '_Tuple2',
-					_0: _elm_lang$core$Native_Utils.update(
-						model,
-						{currentPage: _user$project$Types$Home}),
-					_1: _elm_lang$core$Platform_Cmd$none
+					_0: model,
+					_1: _elm_lang$navigation$Navigation$newUrl(_p0._0)
 				};
-			} else {
-				return {
-					ctor: '_Tuple2',
-					_0: _elm_lang$core$Native_Utils.update(
-						model,
-						{currentPage: _p1._0}),
-					_1: _elm_lang$core$Platform_Cmd$none
-				};
-			}
-		} else {
-			return {
-				ctor: '_Tuple2',
-				_0: model,
-				_1: _elm_lang$navigation$Navigation$newUrl(_p0._0)
-			};
+			default:
+				if (_p0._0.ctor === 'Ok') {
+					return {
+						ctor: '_Tuple2',
+						_0: _elm_lang$core$Native_Utils.update(
+							model,
+							{translations: _p0._0._0}),
+						_1: _elm_lang$core$Platform_Cmd$none
+					};
+				} else {
+					return {ctor: '_Tuple2', _0: model, _1: _elm_lang$core$Platform_Cmd$none};
+				}
 		}
 	});
 var _user$project$App$init = function (location) {
@@ -9680,10 +10017,16 @@ var _user$project$App$init = function (location) {
 			return _p2._0;
 		}
 	}();
+	var initialModel = {currentPage: page, translations: _ChristophP$elm_i18next$I18Next$initialTranslations};
 	return {
 		ctor: '_Tuple2',
-		_0: _user$project$Types$Model(page),
-		_1: _elm_lang$core$Platform_Cmd$none
+		_0: initialModel,
+		_1: _elm_lang$core$Platform_Cmd$batch(
+			{
+				ctor: '::',
+				_0: A2(_ChristophP$elm_i18next$I18Next$fetchTranslations, _user$project$Types$TranslationsLoaded, '/locale/translations.jp.json'),
+				_1: {ctor: '[]'}
+			})
 	};
 };
 
@@ -9696,7 +10039,8 @@ var _user$project$Pages_Schedule$update = function (model) {
 };
 
 var _user$project$Pages_About$update = function (model) {
-	return _elm_lang$html$Html$text('About in a module');
+	return _elm_lang$html$Html$text(
+		A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'nav.about'));
 };
 
 var _user$project$Pages_Instructors$update = function (model) {
