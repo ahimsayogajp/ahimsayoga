@@ -13911,9 +13911,9 @@ var _user$project$Routing$linkAttrs = function (page) {
 		var _p0 = page;
 		switch (_p0.ctor) {
 			case 'Home':
-				return '/#/home';
+				return '/#';
 			case 'HomeEn':
-				return '/#/en/home';
+				return '/#/en';
 			case 'Schedule':
 				return '/#/schedule';
 			case 'ScheduleEn':
@@ -13944,16 +13944,13 @@ var _user$project$Routing$route = _evancz$url_parser$UrlParser$oneOf(
 		_0: A2(
 			_evancz$url_parser$UrlParser$map,
 			_user$project$Types$Home,
-			_evancz$url_parser$UrlParser$s('home')),
+			_evancz$url_parser$UrlParser$s('')),
 		_1: {
 			ctor: '::',
 			_0: A2(
 				_evancz$url_parser$UrlParser$map,
 				_user$project$Types$HomeEn,
-				A2(
-					_evancz$url_parser$UrlParser_ops['</>'],
-					_evancz$url_parser$UrlParser$s('en'),
-					_evancz$url_parser$UrlParser$s('home'))),
+				_evancz$url_parser$UrlParser$s('en')),
 			_1: {
 				ctor: '::',
 				_0: A2(
@@ -15085,7 +15082,7 @@ var _user$project$Pages_Home$content = function (model) {
 																			_0: _elm_lang$html$Html_Attributes$class('btn btn-full'),
 																			_1: {
 																				ctor: '::',
-																				_0: _elm_lang$html$Html_Attributes$href('schedule'),
+																				_0: _elm_lang$html$Html_Attributes$href('/#/schedule'),
 																				_1: {ctor: '[]'}
 																			}
 																		},
@@ -15142,17 +15139,2422 @@ var _user$project$Pages_Home$update = function (model) {
 		});
 };
 
+var _user$project$Pages_Schedule$content = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$section,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('schedule'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$id('schedule'),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('container text-xs-center'),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$h2,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('text-center'),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text(
+										A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.title')),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$div,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('schedule-intro'),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$p,
+											{ctor: '[]'},
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html$text(
+													A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.intro.p1')),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$a,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$href('contact'),
+															_1: {ctor: '[]'}
+														},
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html$text(
+																A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'nav.contact')),
+															_1: {ctor: '[]'}
+														}),
+													_1: {
+														ctor: '::',
+														_0: _elm_lang$html$Html$text(
+															A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.intro.p2')),
+														_1: {ctor: '[]'}
+													}
+												}
+											}),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$table,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('table table-responsive'),
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$thead,
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$class('thead-default'),
+													_1: {ctor: '[]'}
+												},
+												{
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$tr,
+														{ctor: '[]'},
+														{
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$th,
+																{ctor: '[]'},
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html$text(
+																		A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.title')),
+																	_1: {ctor: '[]'}
+																}),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$th,
+																	{ctor: '[]'},
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html$text(
+																			A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.days.mon')),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$th,
+																		{ctor: '[]'},
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html$text(
+																				A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.days.tues')),
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$th,
+																			{ctor: '[]'},
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html$text(
+																					A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.days.wed')),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$th,
+																				{ctor: '[]'},
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html$text(
+																						A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.days.thurs')),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$th,
+																					{ctor: '[]'},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text(
+																							A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.days.fri')),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$th,
+																						{ctor: '[]'},
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html$text(
+																								A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.days.sat')),
+																							_1: {ctor: '[]'}
+																						}),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$th,
+																							{ctor: '[]'},
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text(
+																									A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.days.sun')),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {ctor: '[]'}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}),
+													_1: {ctor: '[]'}
+												}),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$tbody,
+													{ctor: '[]'},
+													{
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$tr,
+															{ctor: '[]'},
+															{
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$th,
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Attributes$scope('row'),
+																		_1: {ctor: '[]'}
+																	},
+																	{
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$a,
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$href('http://ahimsayoga.jp/contact'),
+																				_1: {ctor: '[]'}
+																			},
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html$text(
+																					A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.ahimsa.title')),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$br,
+																				{ctor: '[]'},
+																				{ctor: '[]'}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$span,
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Attributes$class('address'),
+																						_1: {ctor: '[]'}
+																					},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text(
+																							A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.ahimsa.address')),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	}),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$td,
+																		{ctor: '[]'},
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html$text('-'),
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$td,
+																			{ctor: '[]'},
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html$text(
+																					A2(
+																						_elm_lang$core$Basics_ops['++'],
+																						'10am - 60',
+																						A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'))),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$td,
+																				{ctor: '[]'},
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html$text('-'),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$td,
+																					{ctor: '[]'},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text(
+																							A2(
+																								_elm_lang$core$Basics_ops['++'],
+																								'7pm - 60',
+																								A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'))),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$td,
+																						{ctor: '[]'},
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html$text('-'),
+																							_1: {ctor: '[]'}
+																						}),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$td,
+																							{ctor: '[]'},
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text('-'),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(
+																								_elm_lang$html$Html$td,
+																								{ctor: '[]'},
+																								{
+																									ctor: '::',
+																									_0: _elm_lang$html$Html$text('-'),
+																									_1: {ctor: '[]'}
+																								}),
+																							_1: {ctor: '[]'}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}),
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$tr,
+																{ctor: '[]'},
+																{
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$th,
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Attributes$scope('row'),
+																			_1: {ctor: '[]'}
+																		},
+																		{
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$a,
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Attributes$href('http://takigaharafarm.com'),
+																					_1: {ctor: '[]'}
+																				},
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html$text(
+																						A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.takigahara.title')),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$br,
+																					{ctor: '[]'},
+																					{ctor: '[]'}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$span,
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html_Attributes$class('address'),
+																							_1: {ctor: '[]'}
+																						},
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html$text(
+																								A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.takigahara.address')),
+																							_1: {ctor: '[]'}
+																						}),
+																					_1: {ctor: '[]'}
+																				}
+																			}
+																		}),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$td,
+																			{ctor: '[]'},
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html$text('-'),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$td,
+																				{ctor: '[]'},
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html$text('-'),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$td,
+																					{ctor: '[]'},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text('-'),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$td,
+																						{ctor: '[]'},
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html$text('-'),
+																							_1: {ctor: '[]'}
+																						}),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$td,
+																							{ctor: '[]'},
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text('-'),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(
+																								_elm_lang$html$Html$td,
+																								{ctor: '[]'},
+																								{
+																									ctor: '::',
+																									_0: _elm_lang$html$Html$text(
+																										A2(
+																											_elm_lang$core$Basics_ops['++'],
+																											'10am - 60',
+																											A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'))),
+																									_1: {ctor: '[]'}
+																								}),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(
+																									_elm_lang$html$Html$td,
+																									{ctor: '[]'},
+																									{
+																										ctor: '::',
+																										_0: _elm_lang$html$Html$text('-'),
+																										_1: {ctor: '[]'}
+																									}),
+																								_1: {ctor: '[]'}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$tr,
+																	{ctor: '[]'},
+																	{
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$th,
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$scope('row'),
+																				_1: {ctor: '[]'}
+																			},
+																			{
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$a,
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Attributes$href('https://goo.gl/maps/jhapfk1SZeE2'),
+																						_1: {ctor: '[]'}
+																					},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text(
+																							A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.kiboagaoka.title')),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$br,
+																						{ctor: '[]'},
+																						{ctor: '[]'}),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$span,
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html_Attributes$class('address'),
+																								_1: {ctor: '[]'}
+																							},
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text(
+																									A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.kiboagaoka.address')),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {ctor: '[]'}
+																					}
+																				}
+																			}),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$td,
+																				{ctor: '[]'},
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html$text('-'),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$td,
+																					{ctor: '[]'},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text('-'),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$td,
+																						{ctor: '[]'},
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html$text('-'),
+																							_1: {ctor: '[]'}
+																						}),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$td,
+																							{ctor: '[]'},
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text('-'),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(
+																								_elm_lang$html$Html$td,
+																								{ctor: '[]'},
+																								{
+																									ctor: '::',
+																									_0: _elm_lang$html$Html$text(
+																										A2(
+																											_elm_lang$core$Basics_ops['++'],
+																											'1:30pm & 7pm - 60',
+																											A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'))),
+																									_1: {ctor: '[]'}
+																								}),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(
+																									_elm_lang$html$Html$td,
+																									{ctor: '[]'},
+																									{
+																										ctor: '::',
+																										_0: _elm_lang$html$Html$text('-'),
+																										_1: {ctor: '[]'}
+																									}),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(
+																										_elm_lang$html$Html$td,
+																										{ctor: '[]'},
+																										{
+																											ctor: '::',
+																											_0: _elm_lang$html$Html$text('-'),
+																											_1: {ctor: '[]'}
+																										}),
+																									_1: {ctor: '[]'}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}),
+																_1: {ctor: '[]'}
+															}
+														}
+													}),
+												_1: {ctor: '[]'}
+											}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$h3,
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$class('class-cost-title'),
+												_1: {ctor: '[]'}
+											},
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html$text(
+													A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.title')),
+												_1: {ctor: '[]'}
+											}),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$div,
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$class('class-cost'),
+													_1: {ctor: '[]'}
+												},
+												{
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$p,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$class('drop-in'),
+															_1: {ctor: '[]'}
+														},
+														{
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$strong,
+																{ctor: '[]'},
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html$text(
+																		A2(
+																			_elm_lang$core$Basics_ops['++'],
+																			A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.dropin'),
+																			': ')),
+																	_1: {ctor: '[]'}
+																}),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$html$Html$text('1,200円'),
+																_1: {ctor: '[]'}
+															}
+														}),
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$p,
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$class('monthly'),
+																_1: {ctor: '[]'}
+															},
+															{
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$strong,
+																	{ctor: '[]'},
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html$text(
+																			A2(
+																				_elm_lang$core$Basics_ops['++'],
+																				A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.monthly'),
+																				': ')),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {
+																	ctor: '::',
+																	_0: _elm_lang$html$Html$text(
+																		A2(
+																			_elm_lang$core$Basics_ops['++'],
+																			'4 ',
+																			A2(
+																				_elm_lang$core$Basics_ops['++'],
+																				A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.classes'),
+																				' - 4,000円'))),
+																	_1: {ctor: '[]'}
+																}
+															}),
+														_1: {ctor: '[]'}
+													}
+												}),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							}
+						}),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
 var _user$project$Pages_Schedule$update = function (model) {
-	return _elm_lang$html$Html$text('Schedule in a module');
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('nav-wrapper nav'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$id('nav'),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: _user$project$Menu$render_menu(model),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_rundis$elm_bootstrap$Bootstrap_Grid$container,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _user$project$Pages_Schedule$content(model),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _user$project$Footer$render_footer(model),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
 };
 
+var _user$project$Pages_About$content = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$section,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('about'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$id('about'),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('container text-xs-center'),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$h2,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('text-center'),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text(
+										A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.maintitle')),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$div,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('about-text'),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$p,
+											{ctor: '[]'},
+											{
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$strong,
+													{ctor: '[]'},
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html$text('Shivam Yoga'),
+														_1: {ctor: '[]'}
+													}),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$html$Html$text(
+														A2(
+															_elm_lang$core$Basics_ops['++'],
+															' ',
+															A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.shivamyoga.p1'))),
+													_1: {ctor: '[]'}
+												}
+											}),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$p,
+												{ctor: '[]'},
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html$text(
+														A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.shivamyoga.p2')),
+													_1: {ctor: '[]'}
+												}),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$p,
+													{ctor: '[]'},
+													{
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$strong,
+															{ctor: '[]'},
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html$text(
+																	A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.shivamyoga.sankhya.title')),
+																_1: {ctor: '[]'}
+															}),
+														_1: {
+															ctor: '::',
+															_0: _elm_lang$html$Html$text(
+																A2(
+																	_elm_lang$core$Basics_ops['++'],
+																	' ',
+																	A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.shivamyoga.sankhya.body'))),
+															_1: {ctor: '[]'}
+														}
+													}),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$p,
+														{ctor: '[]'},
+														{
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$strong,
+																{ctor: '[]'},
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html$text(
+																		A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.shivamyoga.tantra.title')),
+																	_1: {ctor: '[]'}
+																}),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$html$Html$text(
+																	A2(
+																		_elm_lang$core$Basics_ops['++'],
+																		' ',
+																		A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.shivamyoga.tantra.body'))),
+																_1: {ctor: '[]'}
+															}
+														}),
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$p,
+															{ctor: '[]'},
+															{
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$strong,
+																	{ctor: '[]'},
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html$text(
+																			A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.shivamyoga.expression')),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {ctor: '[]'}
+															}),
+														_1: {ctor: '[]'}
+													}
+												}
+											}
+										}
+									}),
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$section,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('features'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$id('features'),
+							_1: {ctor: '[]'}
+						}
+					},
+					{
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('container'),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$h2,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('text-sm-center'),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html$text(
+											A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.features.title')),
+										_1: {ctor: '[]'}
+									}),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$div,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$class('row'),
+											_1: {ctor: '[]'}
+										},
+										{
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$div,
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$class('feature-col col-lg-4 col-xs-12'),
+													_1: {ctor: '[]'}
+												},
+												{
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$div,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+															_1: {ctor: '[]'}
+														},
+														{
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$div,
+																{ctor: '[]'},
+																{
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$div,
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Attributes$class('feature-icon'),
+																			_1: {ctor: '[]'}
+																		},
+																		{
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$span,
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Attributes$class('fa fa-volume-down'),
+																					_1: {ctor: '[]'}
+																				},
+																				{ctor: '[]'}),
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {ctor: '[]'}
+																}),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$div,
+																	{ctor: '[]'},
+																	{
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$h3,
+																			{ctor: '[]'},
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html$text('Dharana'),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$p,
+																				{ctor: '[]'},
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html$text(
+																						A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.features.dharana')),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {ctor: '[]'}
+																		}
+																	}),
+																_1: {ctor: '[]'}
+															}
+														}),
+													_1: {ctor: '[]'}
+												}),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$div,
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$class('feature-col col-lg-4 col-xs-12'),
+														_1: {ctor: '[]'}
+													},
+													{
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$div,
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+																_1: {ctor: '[]'}
+															},
+															{
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$div,
+																	{ctor: '[]'},
+																	{
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$div,
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$class('feature-icon'),
+																				_1: {ctor: '[]'}
+																			},
+																			{
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$span,
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Attributes$class('fa fa-exchange'),
+																						_1: {ctor: '[]'}
+																					},
+																					{ctor: '[]'}),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$div,
+																		{ctor: '[]'},
+																		{
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$h3,
+																				{ctor: '[]'},
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html$text('Pujas'),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$p,
+																					{ctor: '[]'},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text(
+																							A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.features.pujas')),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {ctor: '[]'}
+																			}
+																		}),
+																	_1: {ctor: '[]'}
+																}
+															}),
+														_1: {ctor: '[]'}
+													}),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$div,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$class('feature-col col-lg-4 col-xs-12'),
+															_1: {ctor: '[]'}
+														},
+														{
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$div,
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+																	_1: {ctor: '[]'}
+																},
+																{
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$div,
+																		{ctor: '[]'},
+																		{
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$div,
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Attributes$class('feature-icon'),
+																					_1: {ctor: '[]'}
+																				},
+																				{
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$span,
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html_Attributes$class('fa fa-user'),
+																							_1: {ctor: '[]'}
+																						},
+																						{ctor: '[]'}),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$div,
+																			{ctor: '[]'},
+																			{
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$h3,
+																					{ctor: '[]'},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text('Pranayamas'),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$p,
+																						{ctor: '[]'},
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html$text(
+																								A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.features.pranayamas')),
+																							_1: {ctor: '[]'}
+																						}),
+																					_1: {ctor: '[]'}
+																				}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
+																}),
+															_1: {ctor: '[]'}
+														}),
+													_1: {ctor: '[]'}
+												}
+											}
+										}),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$div,
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$class('row'),
+												_1: {ctor: '[]'}
+											},
+											{
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$div,
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$class('feature-col col-lg-4 col-xs-12'),
+														_1: {ctor: '[]'}
+													},
+													{
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$div,
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+																_1: {ctor: '[]'}
+															},
+															{
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$div,
+																	{ctor: '[]'},
+																	{
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$div,
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$class('feature-icon'),
+																				_1: {ctor: '[]'}
+																			},
+																			{
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$span,
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Attributes$class('fa fa-balance-scale'),
+																						_1: {ctor: '[]'}
+																					},
+																					{ctor: '[]'}),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$div,
+																		{ctor: '[]'},
+																		{
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$h3,
+																				{ctor: '[]'},
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html$text('Asanas'),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$p,
+																					{ctor: '[]'},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text(
+																							A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.features.asanas')),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {ctor: '[]'}
+																			}
+																		}),
+																	_1: {ctor: '[]'}
+																}
+															}),
+														_1: {ctor: '[]'}
+													}),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$div,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$class('feature-col col-lg-4 col-xs-12'),
+															_1: {ctor: '[]'}
+														},
+														{
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$div,
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+																	_1: {ctor: '[]'}
+																},
+																{
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$div,
+																		{ctor: '[]'},
+																		{
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$div,
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Attributes$class('feature-icon'),
+																					_1: {ctor: '[]'}
+																				},
+																				{
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$span,
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html_Attributes$class('fa fa-battery-full'),
+																							_1: {ctor: '[]'}
+																						},
+																						{ctor: '[]'}),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$div,
+																			{ctor: '[]'},
+																			{
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$h3,
+																					{ctor: '[]'},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text('Bandhas'),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$p,
+																						{ctor: '[]'},
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html$text(
+																								A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.features.bandhas')),
+																							_1: {ctor: '[]'}
+																						}),
+																					_1: {ctor: '[]'}
+																				}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
+																}),
+															_1: {ctor: '[]'}
+														}),
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$div,
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$class('feature-col col-lg-4 col-xs-12'),
+																_1: {ctor: '[]'}
+															},
+															{
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$div,
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+																		_1: {ctor: '[]'}
+																	},
+																	{
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$div,
+																			{ctor: '[]'},
+																			{
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$div,
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Attributes$class('feature-icon'),
+																						_1: {ctor: '[]'}
+																					},
+																					{
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$span,
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html_Attributes$class('fa fa-sign-out'),
+																								_1: {ctor: '[]'}
+																							},
+																							{ctor: '[]'}),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$div,
+																				{ctor: '[]'},
+																				{
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$h3,
+																						{ctor: '[]'},
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html$text('Kriyas'),
+																							_1: {ctor: '[]'}
+																						}),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$p,
+																							{ctor: '[]'},
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text(
+																									A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.features.kriyas')),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {ctor: '[]'}
+																					}
+																				}),
+																			_1: {ctor: '[]'}
+																		}
+																	}),
+																_1: {ctor: '[]'}
+															}),
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$div,
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Attributes$class('feature-col col-lg-4 col-xs-12'),
+																	_1: {ctor: '[]'}
+																},
+																{
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$div,
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+																			_1: {ctor: '[]'}
+																		},
+																		{
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$div,
+																				{ctor: '[]'},
+																				{
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$div,
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html_Attributes$class('feature-icon'),
+																							_1: {ctor: '[]'}
+																						},
+																						{
+																							ctor: '::',
+																							_0: A2(
+																								_elm_lang$html$Html$span,
+																								{
+																									ctor: '::',
+																									_0: _elm_lang$html$Html_Attributes$class('fa fa-unlock-alt'),
+																									_1: {ctor: '[]'}
+																								},
+																								{ctor: '[]'}),
+																							_1: {ctor: '[]'}
+																						}),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$div,
+																					{ctor: '[]'},
+																					{
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$h3,
+																							{ctor: '[]'},
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text('Yoganidra'),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(
+																								_elm_lang$html$Html$p,
+																								{ctor: '[]'},
+																								{
+																									ctor: '::',
+																									_0: _elm_lang$html$Html$text(
+																										A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.features.yoganidra')),
+																									_1: {ctor: '[]'}
+																								}),
+																							_1: {ctor: '[]'}
+																						}
+																					}),
+																				_1: {ctor: '[]'}
+																			}
+																		}),
+																	_1: {ctor: '[]'}
+																}),
+															_1: {
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$div,
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Attributes$class('feature-col col-lg-4 col-xs-12'),
+																		_1: {ctor: '[]'}
+																	},
+																	{
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$div,
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+																				_1: {ctor: '[]'}
+																			},
+																			{
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$div,
+																					{ctor: '[]'},
+																					{
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$div,
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html_Attributes$class('feature-icon'),
+																								_1: {ctor: '[]'}
+																							},
+																							{
+																								ctor: '::',
+																								_0: A2(
+																									_elm_lang$html$Html$span,
+																									{
+																										ctor: '::',
+																										_0: _elm_lang$html$Html_Attributes$class('fa fa-heart'),
+																										_1: {ctor: '[]'}
+																									},
+																									{ctor: '[]'}),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$div,
+																						{ctor: '[]'},
+																						{
+																							ctor: '::',
+																							_0: A2(
+																								_elm_lang$html$Html$h3,
+																								{ctor: '[]'},
+																								{
+																									ctor: '::',
+																									_0: _elm_lang$html$Html$text('Mantras'),
+																									_1: {ctor: '[]'}
+																								}),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(
+																									_elm_lang$html$Html$p,
+																									{ctor: '[]'},
+																									{
+																										ctor: '::',
+																										_0: _elm_lang$html$Html$text(
+																											A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.features.mantras')),
+																										_1: {ctor: '[]'}
+																									}),
+																								_1: {ctor: '[]'}
+																							}
+																						}),
+																					_1: {ctor: '[]'}
+																				}
+																			}),
+																		_1: {ctor: '[]'}
+																	}),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$div,
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Attributes$class('feature-col col-lg-4 col-xs-12'),
+																			_1: {ctor: '[]'}
+																		},
+																		{
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$div,
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+																					_1: {ctor: '[]'}
+																				},
+																				{
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$div,
+																						{ctor: '[]'},
+																						{
+																							ctor: '::',
+																							_0: A2(
+																								_elm_lang$html$Html$div,
+																								{
+																									ctor: '::',
+																									_0: _elm_lang$html$Html_Attributes$class('feature-icon'),
+																									_1: {ctor: '[]'}
+																								},
+																								{
+																									ctor: '::',
+																									_0: A2(
+																										_elm_lang$html$Html$span,
+																										{
+																											ctor: '::',
+																											_0: _elm_lang$html$Html_Attributes$class('fa fa-hand-paper-o'),
+																											_1: {ctor: '[]'}
+																										},
+																										{ctor: '[]'}),
+																									_1: {ctor: '[]'}
+																								}),
+																							_1: {ctor: '[]'}
+																						}),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$div,
+																							{ctor: '[]'},
+																							{
+																								ctor: '::',
+																								_0: A2(
+																									_elm_lang$html$Html$h3,
+																									{ctor: '[]'},
+																									{
+																										ctor: '::',
+																										_0: _elm_lang$html$Html$text('Mudras'),
+																										_1: {ctor: '[]'}
+																									}),
+																								_1: {
+																									ctor: '::',
+																									_0: A2(
+																										_elm_lang$html$Html$p,
+																										{ctor: '[]'},
+																										{
+																											ctor: '::',
+																											_0: _elm_lang$html$Html$text(
+																												A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.features.mudras')),
+																											_1: {ctor: '[]'}
+																										}),
+																									_1: {ctor: '[]'}
+																								}
+																							}),
+																						_1: {ctor: '[]'}
+																					}
+																				}),
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$div,
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$class('feature-col col-lg-4 col-xs-12'),
+																				_1: {ctor: '[]'}
+																			},
+																			{
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$div,
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+																						_1: {ctor: '[]'}
+																					},
+																					{
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$div,
+																							{ctor: '[]'},
+																							{
+																								ctor: '::',
+																								_0: A2(
+																									_elm_lang$html$Html$div,
+																									{
+																										ctor: '::',
+																										_0: _elm_lang$html$Html_Attributes$class('feature-icon'),
+																										_1: {ctor: '[]'}
+																									},
+																									{
+																										ctor: '::',
+																										_0: A2(
+																											_elm_lang$html$Html$span,
+																											{
+																												ctor: '::',
+																												_0: _elm_lang$html$Html_Attributes$class('fa fa-circle'),
+																												_1: {ctor: '[]'}
+																											},
+																											{ctor: '[]'}),
+																										_1: {ctor: '[]'}
+																									}),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(
+																								_elm_lang$html$Html$div,
+																								{ctor: '[]'},
+																								{
+																									ctor: '::',
+																									_0: A2(
+																										_elm_lang$html$Html$h3,
+																										{ctor: '[]'},
+																										{
+																											ctor: '::',
+																											_0: _elm_lang$html$Html$text('Dhyana'),
+																											_1: {ctor: '[]'}
+																										}),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(
+																											_elm_lang$html$Html$p,
+																											{ctor: '[]'},
+																											{
+																												ctor: '::',
+																												_0: _elm_lang$html$Html$text(
+																													A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'about.features.dhyana')),
+																												_1: {ctor: '[]'}
+																											}),
+																										_1: {ctor: '[]'}
+																									}
+																								}),
+																							_1: {ctor: '[]'}
+																						}
+																					}),
+																				_1: {ctor: '[]'}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}),
+										_1: {ctor: '[]'}
+									}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}),
+				_1: {ctor: '[]'}
+			}
+		});
+};
 var _user$project$Pages_About$update = function (model) {
-	return _elm_lang$html$Html$text(
-		A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'nav.about'));
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('nav-wrapper nav'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$id('nav'),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: _user$project$Menu$render_menu(model),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_rundis$elm_bootstrap$Bootstrap_Grid$container,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _user$project$Pages_About$content(model),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _user$project$Footer$render_footer(model),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
 };
 
+var _user$project$Pages_Instructors$content = function (model) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$section,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('team'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$id('team'),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$div,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('container'),
+							_1: {ctor: '[]'}
+						},
+						{
+							ctor: '::',
+							_0: A2(
+								_elm_lang$html$Html$h2,
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$class('text-center'),
+									_1: {ctor: '[]'}
+								},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text(
+										A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'instructors.title')),
+									_1: {ctor: '[]'}
+								}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$html$Html$div,
+									{
+										ctor: '::',
+										_0: _elm_lang$html$Html_Attributes$class('row'),
+										_1: {ctor: '[]'}
+									},
+									{
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$div,
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$class('col-sm-3 col-xs-6 paul-bio'),
+												_1: {ctor: '[]'}
+											},
+											{
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$div,
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+														_1: {ctor: '[]'}
+													},
+													{
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$a,
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$href('#'),
+																_1: {ctor: '[]'}
+															},
+															{
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$img,
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Attributes$alt(''),
+																		_1: {
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Attributes$class('team-img'),
+																			_1: {
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$src('img/paul-1.jpg'),
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	},
+																	{ctor: '[]'}),
+																_1: {
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$div,
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Attributes$class('card-title-wrap'),
+																			_1: {ctor: '[]'}
+																		},
+																		{
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$span,
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Attributes$class('card-title'),
+																					_1: {ctor: '[]'}
+																				},
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html$text('Paul Mc Crodden'),
+																					_1: {ctor: '[]'}
+																				}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$span,
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Attributes$class('card-text'),
+																						_1: {ctor: '[]'}
+																					},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text('Shivam Yoga Instructor'),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {ctor: '[]'}
+																			}
+																		}),
+																	_1: {
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$div,
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$class('team-over'),
+																				_1: {ctor: '[]'}
+																			},
+																			{
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$h4,
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Attributes$class('hidden-md-down'),
+																						_1: {ctor: '[]'}
+																					},
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html$text(
+																							A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'instructors.connect')),
+																						_1: {ctor: '[]'}
+																					}),
+																				_1: {
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$nav,
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html_Attributes$class('nav social-nav'),
+																							_1: {ctor: '[]'}
+																						},
+																						{
+																							ctor: '::',
+																							_0: A2(
+																								_elm_lang$html$Html$a,
+																								{
+																									ctor: '::',
+																									_0: _elm_lang$html$Html_Attributes$href('http://twitter.com/mccrodp'),
+																									_1: {ctor: '[]'}
+																								},
+																								{
+																									ctor: '::',
+																									_0: A2(
+																										_elm_lang$html$Html$i,
+																										{
+																											ctor: '::',
+																											_0: _elm_lang$html$Html_Attributes$class('fa fa-twitter'),
+																											_1: {ctor: '[]'}
+																										},
+																										{ctor: '[]'}),
+																									_1: {ctor: '[]'}
+																								}),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(
+																									_elm_lang$html$Html$a,
+																									{
+																										ctor: '::',
+																										_0: _elm_lang$html$Html_Attributes$href('http://medium.com/@mccrodp'),
+																										_1: {ctor: '[]'}
+																									},
+																									{
+																										ctor: '::',
+																										_0: A2(
+																											_elm_lang$html$Html$i,
+																											{
+																												ctor: '::',
+																												_0: _elm_lang$html$Html_Attributes$class('fa fa-medium'),
+																												_1: {ctor: '[]'}
+																											},
+																											{ctor: '[]'}),
+																										_1: {ctor: '[]'}
+																									}),
+																								_1: {ctor: '[]'}
+																							}
+																						}),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$p,
+																							{ctor: '[]'},
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text(
+																									A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'instructors.bios.paul')),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {ctor: '[]'}
+																					}
+																				}
+																			}),
+																		_1: {ctor: '[]'}
+																	}
+																}
+															}),
+														_1: {ctor: '[]'}
+													}),
+												_1: {ctor: '[]'}
+											}),
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$div,
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html_Attributes$class('col-sm-3 col-xs-6'),
+													_1: {ctor: '[]'}
+												},
+												{
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$div,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+															_1: {ctor: '[]'}
+														},
+														{
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$img,
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Attributes$alt(''),
+																	_1: {
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Attributes$class('team-img'),
+																		_1: {
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Attributes$src('img/paul-2.jpg'),
+																			_1: {ctor: '[]'}
+																		}
+																	}
+																},
+																{ctor: '[]'}),
+															_1: {ctor: '[]'}
+														}),
+													_1: {ctor: '[]'}
+												}),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$div,
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$class('col-sm-3 col-xs-6 miki-bio'),
+														_1: {ctor: '[]'}
+													},
+													{
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$div,
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+																_1: {ctor: '[]'}
+															},
+															{
+																ctor: '::',
+																_0: A2(
+																	_elm_lang$html$Html$a,
+																	{
+																		ctor: '::',
+																		_0: _elm_lang$html$Html_Attributes$href('#'),
+																		_1: {ctor: '[]'}
+																	},
+																	{
+																		ctor: '::',
+																		_0: A2(
+																			_elm_lang$html$Html$img,
+																			{
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$alt(''),
+																				_1: {
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Attributes$class('team-img'),
+																					_1: {
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Attributes$src('img/miki-1.jpg'),
+																						_1: {ctor: '[]'}
+																					}
+																				}
+																			},
+																			{ctor: '[]'}),
+																		_1: {
+																			ctor: '::',
+																			_0: A2(
+																				_elm_lang$html$Html$div,
+																				{
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Attributes$class('card-title-wrap'),
+																					_1: {ctor: '[]'}
+																				},
+																				{
+																					ctor: '::',
+																					_0: A2(
+																						_elm_lang$html$Html$span,
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html_Attributes$class('card-title'),
+																							_1: {ctor: '[]'}
+																						},
+																						{
+																							ctor: '::',
+																							_0: _elm_lang$html$Html$text('Miki Dono'),
+																							_1: {ctor: '[]'}
+																						}),
+																					_1: {
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$span,
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html_Attributes$class('card-text'),
+																								_1: {ctor: '[]'}
+																							},
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text('Shivam Yoga Instructor'),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {ctor: '[]'}
+																					}
+																				}),
+																			_1: {
+																				ctor: '::',
+																				_0: A2(
+																					_elm_lang$html$Html$div,
+																					{
+																						ctor: '::',
+																						_0: _elm_lang$html$Html_Attributes$class('team-over'),
+																						_1: {ctor: '[]'}
+																					},
+																					{
+																						ctor: '::',
+																						_0: A2(
+																							_elm_lang$html$Html$h4,
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html_Attributes$class('hidden-md-down'),
+																								_1: {ctor: '[]'}
+																							},
+																							{
+																								ctor: '::',
+																								_0: _elm_lang$html$Html$text(
+																									A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'instructors.connect')),
+																								_1: {ctor: '[]'}
+																							}),
+																						_1: {
+																							ctor: '::',
+																							_0: A2(
+																								_elm_lang$html$Html$nav,
+																								{
+																									ctor: '::',
+																									_0: _elm_lang$html$Html_Attributes$class('nav social-nav'),
+																									_1: {ctor: '[]'}
+																								},
+																								{
+																									ctor: '::',
+																									_0: A2(
+																										_elm_lang$html$Html$a,
+																										{
+																											ctor: '::',
+																											_0: _elm_lang$html$Html_Attributes$href('tel:+817044408396'),
+																											_1: {ctor: '[]'}
+																										},
+																										{
+																											ctor: '::',
+																											_0: A2(
+																												_elm_lang$html$Html$i,
+																												{
+																													ctor: '::',
+																													_0: _elm_lang$html$Html_Attributes$class('fa fa-phone'),
+																													_1: {ctor: '[]'}
+																												},
+																												{ctor: '[]'}),
+																											_1: {ctor: '[]'}
+																										}),
+																									_1: {
+																										ctor: '::',
+																										_0: A2(
+																											_elm_lang$html$Html$a,
+																											{
+																												ctor: '::',
+																												_0: _elm_lang$html$Html_Attributes$href('mailto:miki@ahimsayoga.jp'),
+																												_1: {ctor: '[]'}
+																											},
+																											{
+																												ctor: '::',
+																												_0: A2(
+																													_elm_lang$html$Html$i,
+																													{
+																														ctor: '::',
+																														_0: _elm_lang$html$Html_Attributes$class('fa fa-envelope'),
+																														_1: {ctor: '[]'}
+																													},
+																													{ctor: '[]'}),
+																												_1: {ctor: '[]'}
+																											}),
+																										_1: {ctor: '[]'}
+																									}
+																								}),
+																							_1: {
+																								ctor: '::',
+																								_0: A2(
+																									_elm_lang$html$Html$p,
+																									{ctor: '[]'},
+																									{
+																										ctor: '::',
+																										_0: _elm_lang$html$Html$text(
+																											A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'instructors.bios.miki')),
+																										_1: {ctor: '[]'}
+																									}),
+																								_1: {ctor: '[]'}
+																							}
+																						}
+																					}),
+																				_1: {ctor: '[]'}
+																			}
+																		}
+																	}),
+																_1: {ctor: '[]'}
+															}),
+														_1: {ctor: '[]'}
+													}),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$div,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$class('col-sm-3 col-xs-6'),
+															_1: {ctor: '[]'}
+														},
+														{
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$div,
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Attributes$class('card card-block'),
+																	_1: {ctor: '[]'}
+																},
+																{
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$img,
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html_Attributes$alt(''),
+																			_1: {
+																				ctor: '::',
+																				_0: _elm_lang$html$Html_Attributes$class('team-img'),
+																				_1: {
+																					ctor: '::',
+																					_0: _elm_lang$html$Html_Attributes$src('img/miki-2.jpg'),
+																					_1: {ctor: '[]'}
+																				}
+																			}
+																		},
+																		{ctor: '[]'}),
+																	_1: {ctor: '[]'}
+																}),
+															_1: {ctor: '[]'}
+														}),
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									}),
+								_1: {ctor: '[]'}
+							}
+						}),
+					_1: {ctor: '[]'}
+				}),
+			_1: {ctor: '[]'}
+		});
+};
 var _user$project$Pages_Instructors$update = function (model) {
-	return _elm_lang$html$Html$text('Instructors in a module');
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$div,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('nav-wrapper nav'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$id('nav'),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: _user$project$Menu$render_menu(model),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_rundis$elm_bootstrap$Bootstrap_Grid$container,
+					{ctor: '[]'},
+					{
+						ctor: '::',
+						_0: _user$project$Pages_Instructors$content(model),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: _user$project$Footer$render_footer(model),
+					_1: {ctor: '[]'}
+				}
+			}
+		});
 };
 
 var _user$project$Pages_Contact$content = function (model) {
