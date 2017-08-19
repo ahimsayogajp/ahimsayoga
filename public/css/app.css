@@ -55,7 +55,7 @@ th, td {
         background-color: #bc0b66; }
 
 .btn-full {
-  margin-left: 10px; }
+  margin: 10px 0 0 10px; }
 
 .location {
   font-size: 30px;
