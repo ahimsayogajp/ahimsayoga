@@ -151,6 +151,10 @@ require.register("elm/App.elm", function(exports, require, module) {
 
 });
 
+;require.register("elm/Footer.elm", function(exports, require, module) {
+
+});
+
 ;require.register("elm/Main.elm", function(exports, require, module) {
 
 });
@@ -180,10 +184,6 @@ require.register("elm/App.elm", function(exports, require, module) {
 });
 
 ;require.register("elm/Pages/Schedule.elm", function(exports, require, module) {
-
-});
-
-;require.register("elm/Pages/page.elm", function(exports, require, module) {
 
 });
 
