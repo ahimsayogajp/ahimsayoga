@@ -42,7 +42,7 @@
   "schedule": {
     "title": "Class Schedule",
     "intro": {
-      "p1": "Please check the correct location and　",
+      "p1": "Please check the correct location. ",
       "p2": " and book at least 1 day in advance to avoid dissapointment."
     },
     "locations" : {

@@ -53,6 +53,9 @@ th, td {
       .lang-switcher-wrapper .lang-switcher a:hover {
         color: white;
         background-color: #bc0b66; }
+      .lang-switcher-wrapper .lang-switcher a.active {
+        color: white;
+        background-color: #bc0b66; }
 
 .btn-full {
   margin: 10px 0 0 10px; }
