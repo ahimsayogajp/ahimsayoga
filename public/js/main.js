@@ -15505,7 +15505,7 @@ var _user$project$Pages_Home$content = function (model) {
 																},
 																{
 																	ctor: '::',
-																	_0: _elm_lang$html$Html$text('Kanazawa 金沢 & Komatsu 小松'),
+																	_0: _elm_lang$html$Html$text('ヨガ教室：　Kanazawa 金沢 & Komatsu 小松'),
 																	_1: {ctor: '[]'}
 																}),
 															_1: {
