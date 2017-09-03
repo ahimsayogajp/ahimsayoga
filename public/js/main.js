@@ -16116,7 +16116,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																					_elm_lang$html$Html$a,
 																					{
 																						ctor: '::',
-																						_0: _elm_lang$html$Html_Attributes$href('https://goo.gl/maps/jhapfk1SZeE2'),
+																						_0: _elm_lang$html$Html_Attributes$href('https://goo.gl/maps/WrNdyNDd4Dv'),
 																						_1: {ctor: '[]'}
 																					},
 																					{
@@ -16200,7 +16200,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																									_0: _elm_lang$html$Html$text(
 																										A2(
 																											_elm_lang$core$Basics_ops['++'],
-																											'1:30pm & 7pm - 60',
+																											'7pm - 60',
 																											A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'))),
 																									_1: {ctor: '[]'}
 																								}),

@@ -106,7 +106,7 @@ content model =
                     ]
                     , H.tr []
                     [ H.th [ scope "row" ]
-                        [ H.a [ href "https://goo.gl/maps/jhapfk1SZeE2" ]
+                        [ H.a [ href "https://goo.gl/maps/WrNdyNDd4Dv" ]
                         [ text (t model.translations "schedule.locations.kiboagaoka.title") ]
                         , H.br []
                         []
@@ -122,7 +122,7 @@ content model =
                     , H.td []
                         [ text "-" ]
                     , H.td []
-                        [ text ("1:30pm & 7pm - 60" ++ (t model.translations "schedule.pricing.mins"))
+                        [ text ("7pm - 60" ++ (t model.translations "schedule.pricing.mins"))
                         ]
                     , H.td []
                         [ text "-" ]
