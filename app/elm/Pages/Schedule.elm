@@ -68,7 +68,7 @@ content model =
                     , H.td []
                         [ text "-" ]
                     , H.td []
-                        [ text ("10am - 60" ++ (t model.translations "schedule.pricing.mins")) ]
+                        [ text "-" ]
                     , H.td []
                         [ text "-" ]
                     , H.td []
@@ -76,7 +76,7 @@ content model =
                     , H.td []
                         [ text "-" ]
                     , H.td []
-                        [ text "-" ]
+                        [ text ("10am - 60" ++ (t model.translations "schedule.pricing.mins")) ]
                     , H.td []
                         [ text "-" ]
                     ]
@@ -100,9 +100,9 @@ content model =
                     , H.td []
                         [ text "-" ]
                     , H.td []
-                        [ text ("10am - 60" ++ (t model.translations "schedule.pricing.mins")) ]
+                        [ text (t model.translations "schedule.locations.takigahara.detail" ++ " *") ]
                     , H.td []
-                        [ text "-" ]
+                        [ text "" ]
                     ]
                     , H.tr []
                     [ H.th [ scope "row" ]
@@ -131,6 +131,7 @@ content model =
                     ]
                     ]
                 ],
+                div [class "schedule-extra-detail"] [text ("* " ++ (t model.translations "schedule.detail"))],
                 H.h3 [class "class-cost-title"] [text (t model.translations "schedule.pricing.title")],
                 div [class "class-cost"]
                     [   H.p [class "drop-in"] [

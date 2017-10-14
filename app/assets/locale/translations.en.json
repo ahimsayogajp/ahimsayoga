@@ -45,6 +45,7 @@
       "p1": "Please check the correct location. ",
       "p2": " and book at least 1 day in advance to avoid dissapointment."
     },
+    "detail": "Takigahara Farm class is on Sunday 29th October at 10am this month.",
     "locations" : {
       "title" : "Locations",
       "ahimsa" : {
@@ -53,7 +54,8 @@
       },
       "takigahara": {
         "title": "Takigahara Farm",
-        "address": "Takigaharamachi O-66, Komatsu"
+        "address": "Takigaharamachi O-66, Komatsu",
+        "detail": "Sat / Sun once monthly"
       },
       "kiboagaoka": {
         "title": "Kibogaoka Community Center",

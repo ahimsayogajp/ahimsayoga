@@ -15889,11 +15889,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																			{ctor: '[]'},
 																			{
 																				ctor: '::',
-																				_0: _elm_lang$html$Html$text(
-																					A2(
-																						_elm_lang$core$Basics_ops['++'],
-																						'10am - 60',
-																						A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'))),
+																				_0: _elm_lang$html$Html$text('-'),
 																				_1: {ctor: '[]'}
 																			}),
 																		_1: {
@@ -15937,7 +15933,11 @@ var _user$project$Pages_Schedule$content = function (model) {
 																							{ctor: '[]'},
 																							{
 																								ctor: '::',
-																								_0: _elm_lang$html$Html$text('-'),
+																								_0: _elm_lang$html$Html$text(
+																									A2(
+																										_elm_lang$core$Basics_ops['++'],
+																										'10am - 60',
+																										A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'))),
 																								_1: {ctor: '[]'}
 																							}),
 																						_1: {
@@ -16073,8 +16073,8 @@ var _user$project$Pages_Schedule$content = function (model) {
 																									_0: _elm_lang$html$Html$text(
 																										A2(
 																											_elm_lang$core$Basics_ops['++'],
-																											'10am - 60',
-																											A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'))),
+																											A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.takigahara.detail'),
+																											' *')),
 																									_1: {ctor: '[]'}
 																								}),
 																							_1: {
@@ -16084,7 +16084,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																									{ctor: '[]'},
 																									{
 																										ctor: '::',
-																										_0: _elm_lang$html$Html$text('-'),
+																										_0: _elm_lang$html$Html$text(''),
 																										_1: {ctor: '[]'}
 																									}),
 																								_1: {ctor: '[]'}
@@ -16243,63 +16243,52 @@ var _user$project$Pages_Schedule$content = function (model) {
 									_1: {
 										ctor: '::',
 										_0: A2(
-											_elm_lang$html$Html$h3,
+											_elm_lang$html$Html$div,
 											{
 												ctor: '::',
-												_0: _elm_lang$html$Html_Attributes$class('class-cost-title'),
+												_0: _elm_lang$html$Html_Attributes$class('schedule-extra-detail'),
 												_1: {ctor: '[]'}
 											},
 											{
 												ctor: '::',
 												_0: _elm_lang$html$Html$text(
-													A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.title')),
+													A2(
+														_elm_lang$core$Basics_ops['++'],
+														'* ',
+														A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.detail'))),
 												_1: {ctor: '[]'}
 											}),
 										_1: {
 											ctor: '::',
 											_0: A2(
-												_elm_lang$html$Html$div,
+												_elm_lang$html$Html$h3,
 												{
 													ctor: '::',
-													_0: _elm_lang$html$Html_Attributes$class('class-cost'),
+													_0: _elm_lang$html$Html_Attributes$class('class-cost-title'),
 													_1: {ctor: '[]'}
 												},
 												{
 													ctor: '::',
-													_0: A2(
-														_elm_lang$html$Html$p,
-														{
-															ctor: '::',
-															_0: _elm_lang$html$Html_Attributes$class('drop-in'),
-															_1: {ctor: '[]'}
-														},
-														{
-															ctor: '::',
-															_0: A2(
-																_elm_lang$html$Html$strong,
-																{ctor: '[]'},
-																{
-																	ctor: '::',
-																	_0: _elm_lang$html$Html$text(
-																		A2(
-																			_elm_lang$core$Basics_ops['++'],
-																			A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.dropin'),
-																			': ')),
-																	_1: {ctor: '[]'}
-																}),
-															_1: {
-																ctor: '::',
-																_0: _elm_lang$html$Html$text('1,200円'),
-																_1: {ctor: '[]'}
-															}
-														}),
-													_1: {
+													_0: _elm_lang$html$Html$text(
+														A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.title')),
+													_1: {ctor: '[]'}
+												}),
+											_1: {
+												ctor: '::',
+												_0: A2(
+													_elm_lang$html$Html$div,
+													{
+														ctor: '::',
+														_0: _elm_lang$html$Html_Attributes$class('class-cost'),
+														_1: {ctor: '[]'}
+													},
+													{
 														ctor: '::',
 														_0: A2(
 															_elm_lang$html$Html$p,
 															{
 																ctor: '::',
-																_0: _elm_lang$html$Html_Attributes$class('monthly'),
+																_0: _elm_lang$html$Html_Attributes$class('drop-in'),
 																_1: {ctor: '[]'}
 															},
 															{
@@ -16312,27 +16301,57 @@ var _user$project$Pages_Schedule$content = function (model) {
 																		_0: _elm_lang$html$Html$text(
 																			A2(
 																				_elm_lang$core$Basics_ops['++'],
-																				A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.monthly'),
+																				A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.dropin'),
 																				': ')),
 																		_1: {ctor: '[]'}
 																	}),
 																_1: {
 																	ctor: '::',
-																	_0: _elm_lang$html$Html$text(
-																		A2(
-																			_elm_lang$core$Basics_ops['++'],
-																			'4 ',
-																			A2(
-																				_elm_lang$core$Basics_ops['++'],
-																				A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.classes'),
-																				' - 4,000円'))),
+																	_0: _elm_lang$html$Html$text('1,200円'),
 																	_1: {ctor: '[]'}
 																}
 															}),
-														_1: {ctor: '[]'}
-													}
-												}),
-											_1: {ctor: '[]'}
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$p,
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Attributes$class('monthly'),
+																	_1: {ctor: '[]'}
+																},
+																{
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$strong,
+																		{ctor: '[]'},
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html$text(
+																				A2(
+																					_elm_lang$core$Basics_ops['++'],
+																					A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.monthly'),
+																					': ')),
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {
+																		ctor: '::',
+																		_0: _elm_lang$html$Html$text(
+																			A2(
+																				_elm_lang$core$Basics_ops['++'],
+																				'4 ',
+																				A2(
+																					_elm_lang$core$Basics_ops['++'],
+																					A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.classes'),
+																					' - 4,000円'))),
+																		_1: {ctor: '[]'}
+																	}
+																}),
+															_1: {ctor: '[]'}
+														}
+													}),
+												_1: {ctor: '[]'}
+											}
 										}
 									}
 								}

@@ -45,6 +45,7 @@
       "p1": "それぞれのクラスの会場をご確認の上、前日までにご予約をお願いします。 ",
       "p2": "より承ります。"
     },
+    "detail": "今月のTakigahara Farmのクラス : 10月29日 10am ~",
     "locations" : {
       "title" : "会場",
       "ahimsa" : {
@@ -53,7 +54,8 @@
       },
       "takigahara": {
         "title": "Takigahara Farm",
-        "address": "小松市滝ヶ原町ヲ６６"
+        "address": "小松市滝ヶ原町ヲ６６",
+        "detail": "月一回開催"
       },
       "kiboagaoka": {
         "title": "希望丘会館",
