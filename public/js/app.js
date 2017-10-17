@@ -159,10 +159,6 @@ require.register("elm/App.elm", function(exports, require, module) {
 
 });
 
-;require.register("elm/Main.elm", function(exports, require, module) {
-
-});
-
 ;require.register("elm/Menu.elm", function(exports, require, module) {
 
 });

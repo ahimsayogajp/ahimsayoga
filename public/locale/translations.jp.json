@@ -13,8 +13,8 @@
   "about": {
     "maintitle": "Shivam Yogaについて",
     "shivamyoga": {
-      "p1": "は、哲学的かつホリスティックなシステムです。 この伝統的な方法論は、ドラヴィダ人の文明で１万〜７千年前に創られたヨガの起源を尊重しています。",
-      "p2": "Shivam Yoga は、SankhyaとTantraという2つの哲学に基づいています。",
+      "p1": "Shivam Yoga (シバムヨガ)とはヨガの起源である古代インドの哲学を大切にした伝統的なヨガです。自然を母なる大地として尊敬し、自然と調和して生きた古代インド、ドラヴィダ人の文明の中心であったSankhyaとTantraという2つの哲学に基づいています。",
+      "p2": "Shivam Yogaを通して、自分自身の体や心の在り方を見つめ、受け止め、いたわり、高める。より軽く、より幸せに、そして、よりナチュラルに。",
       "sankhya": {
         "title": "Sankhya（サーンキヤ）",
         "body": "は、主にカルマとダルマの法則といった宇宙の法則に基づいて、生命と宇宙の存在について説明する哲学です。"
@@ -45,7 +45,11 @@
       "p1": "それぞれのクラスの会場をご確認の上、前日までにご予約をお願いします。 ",
       "p2": "より承ります。"
     },
-    "detail": "今月のTakigahara Farmのクラス : 10月29日 10am (日) ~",
+    "detail": "今月のTakigahara Farmのクラスは 10月29日(日)10am ~ Takigahara Festivalにて開催します。",
+    "event": {
+      "teaser": "詳細および参加チケットの購入は以下のFacebookイベントページにてお願いします。",
+      "link": "Facebookイベント: Shivam Yoga Class ＠ Takigahara Festival."
+    },
     "locations" : {
       "title" : "会場",
       "ahimsa" : {
@@ -55,7 +59,7 @@
       "takigahara": {
         "title": "Takigahara Farm",
         "address": "小松市滝ヶ原町ヲ６６",
-        "detail": "月一回開催"
+        "detail": "月１回開催"
       },
       "kiboagaoka": {
         "title": "希望丘会館",

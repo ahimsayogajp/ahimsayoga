@@ -99,6 +99,8 @@ div .navbar .navbar-toggler-right {
 
 .schedule-extra-detail {
   color: #bc0b66; }
+  .schedule-extra-detail a:hover {
+    text-decoration: underline; }
 
 .highlight {
   background-color: rgba(188, 11, 102, 0.1);
@@ -136,7 +138,9 @@ section {
   margin: 0;
   overflow: hidden; }
 
-a:hover {
+nav a:hover,
+footer ul a:hover,
+.lang-switcher a:hover {
   text-decoration: none; }
 
 p a:hover {

@@ -45,7 +45,11 @@
       "p1": "Please check the correct location. ",
       "p2": " and book at least 1 day in advance to avoid dissapointment."
     },
-    "detail": "Takigahara Farm class is on Sunday 29th October at 10am this month.",
+    "detail": "Takigahara Farm class is on Sunday 29th October at 10am this month for Takigahara festival.",
+    "event": {
+      "teaser": "See Facebook event page below for more information and tickets: ",
+      "link": "Facebook Event: Shivam Yoga Class at Takigahara Festival."
+    },
     "locations" : {
       "title" : "Locations",
       "ahimsa" : {

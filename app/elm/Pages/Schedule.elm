@@ -6,7 +6,7 @@ import Html exposing (..)
 import Menu exposing (..)
 import Footer exposing (..)
 import Html as H exposing (Html, text, div, img)
-import Html.Attributes as A exposing (id, class, href, src, style, title, alt, type_, scope)
+import Html.Attributes as A exposing (id, class, href, src, style, title, alt, type_, scope, target)
 import Bootstrap.Grid as Grid
 import I18Next exposing (t)
 
@@ -132,6 +132,11 @@ content model =
                     ]
                 ],
                 div [class "schedule-extra-detail"] [text ("* " ++ (t model.translations "schedule.detail"))],
+                div [] [
+                    div [class "schedule-event-detail"] [text (t model.translations "schedule.event.teaser")],
+                    H.a [ href "https://www.facebook.com/events/663457504041864/", target "_blank" ]
+                    [ text (t model.translations "schedule.event.link") ]
+                ],
                 H.h3 [class "class-cost-title"] [text (t model.translations "schedule.pricing.title")],
                 div [class "class-cost"]
                     [   H.p [class "drop-in"] [
