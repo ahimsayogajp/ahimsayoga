@@ -97,6 +97,13 @@ div .navbar .navbar-toggler-right {
   font-size: 25px;
   right: 0; }
 
+.schedule-extra-detail {
+  color: #bc0b66; }
+
+.highlight {
+  background-color: rgba(188, 11, 102, 0.1);
+  color: #bc0b66; }
+
 /* ==================================================
   Elements
   ================================================== */

@@ -16067,7 +16067,11 @@ var _user$project$Pages_Schedule$content = function (model) {
 																							ctor: '::',
 																							_0: A2(
 																								_elm_lang$html$Html$td,
-																								{ctor: '[]'},
+																								{
+																									ctor: '::',
+																									_0: _elm_lang$html$Html_Attributes$class('highlight'),
+																									_1: {ctor: '[]'}
+																								},
 																								{
 																									ctor: '::',
 																									_0: _elm_lang$html$Html$text(
@@ -16081,7 +16085,11 @@ var _user$project$Pages_Schedule$content = function (model) {
 																								ctor: '::',
 																								_0: A2(
 																									_elm_lang$html$Html$td,
-																									{ctor: '[]'},
+																									{
+																										ctor: '::',
+																										_0: _elm_lang$html$Html_Attributes$class('highlight'),
+																										_1: {ctor: '[]'}
+																									},
 																									{
 																										ctor: '::',
 																										_0: _elm_lang$html$Html$text(''),
