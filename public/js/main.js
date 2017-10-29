@@ -16292,7 +16292,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 															_elm_lang$html$Html$a,
 															{
 																ctor: '::',
-																_0: _elm_lang$html$Html_Attributes$href('https://www.facebook.com/events/663457504041864/'),
+																_0: _elm_lang$html$Html_Attributes$href('https://www.facebook.com/events/122700048405460'),
 																_1: {
 																	ctor: '::',
 																	_0: _elm_lang$html$Html_Attributes$target('_blank'),

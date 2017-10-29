@@ -134,7 +134,7 @@ content model =
                 div [class "schedule-extra-detail"] [text ("* " ++ (t model.translations "schedule.detail"))],
                 div [] [
                     div [class "schedule-event-detail"] [text (t model.translations "schedule.event.teaser")],
-                    H.a [ href "https://www.facebook.com/events/663457504041864/", target "_blank" ]
+                    H.a [ href "https://www.facebook.com/events/122700048405460", target "_blank" ]
                     [ text (t model.translations "schedule.event.link") ]
                 ],
                 H.h3 [class "class-cost-title"] [text (t model.translations "schedule.pricing.title")],
