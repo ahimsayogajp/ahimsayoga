@@ -49,6 +49,28 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900' rel='stylesheet' type='text/css'>
   </head>
   <body>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+            appId            : '969485113198945',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v2.11'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div class="fb-customerchat"
+        page_id="1834324126593176"
+        minimized="true">
+    </div>
     <div id="elm-main"></div>
 
     <!--<a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>-->
