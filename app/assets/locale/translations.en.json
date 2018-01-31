@@ -64,6 +64,11 @@
       "kiboagaoka": {
         "title": "Kibogaoka Community Center",
         "address": "1-91 Kibogaoka, Komatsu"
+      },
+      "hakusan": {
+        "title": "Hakusan Center",
+        "address": "Wasadanimachi, Nomi",
+        "detail": "Opening Summer 2018"
       }
     },
     "days": {

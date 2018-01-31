@@ -64,6 +64,11 @@
       "kiboagaoka": {
         "title": "希望丘会館",
         "address": "小松市希望丘１−９１"
+      },
+      "hakusan": {
+        "title": "Hakusan Center",
+        "address": "能美市和佐谷町",
+        "detail": "２０１８年初夏オープン"
       }
     },
     "days": {
