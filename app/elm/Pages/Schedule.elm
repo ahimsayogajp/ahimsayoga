@@ -58,7 +58,7 @@ content model =
                 , H.tbody []
                     [ H.tr []
                     [ H.th [ scope "row" ]
-                        [ H.a [ href "http://ahimsayoga.jp/contact" ]
+                        [ H.a [ href "https://goo.gl/maps/qSmCTFHxpH22" ]
                         [ text (t model.translations "schedule.locations.ahimsa.title") ]
                         , H.br []
                         []
