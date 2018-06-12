@@ -45,7 +45,6 @@
       "p1": "それぞれのクラスの会場をご確認の上、前日までにご予約をお願いします。 ",
       "p2": "より承ります。"
     },
-    "detail": "今月のTakigahara Farmのクラスは 11月25日(土))10am。",
     "event": {
       "teaser": "詳細および参加チケットの購入は以下のFacebookイベントページにてお願いします。",
       "link": "Facebookイベント: ヨガワークショップ."
@@ -54,21 +53,17 @@
       "title" : "会場",
       "ahimsa" : {
         "title": "Ahimsa Center",
-        "address": "金沢市石引２丁目１−２４"
-      },
-      "takigahara": {
-        "title": "Takigahara Farm",
-        "address": "小松市滝ヶ原町ヲ６６",
-        "detail": "月１回開催"
+        "address": "石川県能美市和佐谷町丁42-1",
+        "detail": "２０１８年初夏オープン"
       },
       "kiboagaoka": {
         "title": "希望丘会館",
         "address": "小松市希望丘１−９１"
       },
-      "hakusan": {
-        "title": "Hakusan Center",
-        "address": "能美市和佐谷町",
-        "detail": "２０１８年初夏オープン"
+      "kumu": {
+        "title": "KUMU 金沢 - The Share Hotels",
+        "address": "金沢市上堤町2-40",
+        "detail": "隔週開催"
       }
     },
     "days": {
@@ -86,7 +81,8 @@
       "classes": "クラス",
       "mins": "分",
       "dropin": "ドロップイン",
-      "monthly": "４回券"
+      "four": "４回券",
+      "eight": "８回券"
     }
   },
   "instructors": {
@@ -102,8 +98,8 @@
     "location": {
       "title": "Ahimsa Center",
       "address": {
-        "line1": "〒920-0935",
-        "line2": "石川県金沢市石引２丁目１−２４",
+        "line1": "〒923-1208",
+        "line2": "石川県能美市和佐谷町丁42-1",
         "line3": ""
       }
     }

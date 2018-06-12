@@ -72,7 +72,7 @@ content model =
                     , H.td []
                         [ text "-" ]
                     , H.td []
-                        [ text ("7pm - 60" ++ (t model.translations "schedule.pricing.mins")) ]
+                        []
                     , H.td []
                         [ text "-" ]
                     , H.td []
@@ -80,30 +80,6 @@ content model =
                     , H.td []
                         [ text "-" ]
                     ]
-                    -- , H.tr []
-                    -- [ H.th [ scope "row" ]
-                    --     [ H.a [ href "http://takigaharafarm.com" ]
-                    --     [ text (t model.translations "schedule.locations.takigahara.title") ]
-                    --     , H.br []
-                    --     []
-                    --     , H.span [ class "address" ]
-                    --     [ text (t model.translations "schedule.locations.takigahara.address") ]
-                    --     ]
-                    -- , H.td []
-                    --     [ text "-" ]
-                    -- , H.td []
-                    --     [ text "-" ]
-                    -- , H.td []
-                    --     [ text "-" ]
-                    -- , H.td []
-                    --     [ text "-" ]
-                    -- , H.td []
-                    --     [ text "-" ]
-                    -- , H.td [ class "highlight" ]
-                    --     [ text (t model.translations "schedule.locations.takigahara.detail" ++ " *") ]
-                    -- , H.td [ class "highlight" ]
-                    --     [ text "" ]
-                    -- ]
                     , H.tr []
                     [ H.th [ scope "row" ]
                         [ H.a [ href "https://goo.gl/maps/WrNdyNDd4Dv" ]
@@ -120,10 +96,9 @@ content model =
                     , H.td []
                         [ text "-" ]
                     , H.td []
-                        [ text "-" ]
+                        [ text ("7pm - 60" ++ (t model.translations "schedule.pricing.mins")) ]
                     , H.td []
-                        [ text ("7pm - 60" ++ (t model.translations "schedule.pricing.mins"))
-                        ]
+                        [ text "-" ]
                     , H.td []
                         [ text "-" ]
                     , H.td []
@@ -132,11 +107,11 @@ content model =
                     , H.tr []
                     [ H.th [ scope "row" ]
                         [ H.a [ href "https://goo.gl/maps/do3JngQWFTN2" ]
-                        [ text (t model.translations "schedule.locations.hakusan.title") ]
+                        [ text (t model.translations "schedule.locations.kumu.title") ]
                         , H.br []
                         []
                         , H.span [ class "address" ]
-                        [ text (t model.translations "schedule.locations.hakusan.address") ]
+                        [ text (t model.translations "schedule.locations.kumu.address") ]
                         ]
                     , H.td [ class "highlight" ]
                         [ text "" ]
@@ -145,13 +120,13 @@ content model =
                     , H.td [ class "highlight" ]
                         [ text "" ]
                     , H.td [ class "highlight" ]
-                        [ text (t model.translations "schedule.locations.hakusan.detail") ]
-                    , H.td [ class "highlight" ]
                         [ text "" ]
                     , H.td [ class "highlight" ]
                         [ text "" ]
                     , H.td [ class "highlight" ]
                         [ text "" ]
+                    , H.td [ class "highlight" ]
+                        [ text ("8am - 60" ++ (t model.translations "schedule.pricing.mins") ++ " " ++ t model.translations "schedule.locations.kumu.detail") ]
                     ]
                     ]
                 ],
@@ -165,11 +140,15 @@ content model =
                 div [class "class-cost"]
                     [   H.p [class "drop-in"] [
                             H.strong [] [text ((t model.translations "schedule.pricing.dropin") ++ ": ")],
-                            text ("1,200円")
+                            text ("1,500円")
                         ],
                         H.p [class "monthly"] [
-                            H.strong [] [text ((t model.translations "schedule.pricing.monthly") ++ ": ")],
-                            text ("4 " ++ (t model.translations "schedule.pricing.classes")  ++ " - 4,000円")
+                            H.strong [] [text ((t model.translations "schedule.pricing.four") ++ ": ")],
+                            text ("5,000円")
+                        ],
+                        H.p [class "monthly"] [
+                            H.strong [] [text ((t model.translations "schedule.pricing.eight") ++ ": ")],
+                            text ("8,000円")
                         ]
                     ]
                 ]

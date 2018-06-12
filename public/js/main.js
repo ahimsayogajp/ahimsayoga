@@ -14232,7 +14232,7 @@ var _user$project$Footer$render_footer = function (model) {
 																_elm_lang$html$Html$a,
 																{
 																	ctor: '::',
-																	_0: _elm_lang$html$Html_Attributes$href('mailto:miki@ahimsayoga.jp'),
+																	_0: _elm_lang$html$Html_Attributes$href('mailto:hello@ahimsayoga.jp'),
 																	_1: {ctor: '[]'}
 																},
 																{
@@ -14247,7 +14247,7 @@ var _user$project$Footer$render_footer = function (model) {
 																		{ctor: '[]'}),
 																	_1: {
 																		ctor: '::',
-																		_0: _elm_lang$html$Html$text('miki@ahimsayoga.jp'),
+																		_0: _elm_lang$html$Html$text('hello@ahimsayoga.jp'),
 																		_1: {ctor: '[]'}
 																	}
 																}),
@@ -15505,7 +15505,7 @@ var _user$project$Pages_Home$content = function (model) {
 																},
 																{
 																	ctor: '::',
-																	_0: _elm_lang$html$Html$text('ヨガ教室：　Kanazawa 金沢 & Komatsu 小松'),
+																	_0: _elm_lang$html$Html$text('ヨガ教室：　Kanazawa 金沢, Hakusan 白山市 & Komatsu 小松'),
 																	_1: {ctor: '[]'}
 																}),
 															_1: {
@@ -15907,15 +15907,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																				_0: A2(
 																					_elm_lang$html$Html$td,
 																					{ctor: '[]'},
-																					{
-																						ctor: '::',
-																						_0: _elm_lang$html$Html$text(
-																							A2(
-																								_elm_lang$core$Basics_ops['++'],
-																								'7pm - 60',
-																								A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'))),
-																						_1: {ctor: '[]'}
-																					}),
+																					{ctor: '[]'}),
 																				_1: {
 																					ctor: '::',
 																					_0: A2(
@@ -16050,7 +16042,11 @@ var _user$project$Pages_Schedule$content = function (model) {
 																						{ctor: '[]'},
 																						{
 																							ctor: '::',
-																							_0: _elm_lang$html$Html$text('-'),
+																							_0: _elm_lang$html$Html$text(
+																								A2(
+																									_elm_lang$core$Basics_ops['++'],
+																									'7pm - 60',
+																									A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'))),
 																							_1: {ctor: '[]'}
 																						}),
 																					_1: {
@@ -16060,11 +16056,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																							{ctor: '[]'},
 																							{
 																								ctor: '::',
-																								_0: _elm_lang$html$Html$text(
-																									A2(
-																										_elm_lang$core$Basics_ops['++'],
-																										'7pm - 60',
-																										A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'))),
+																								_0: _elm_lang$html$Html$text('-'),
 																								_1: {ctor: '[]'}
 																							}),
 																						_1: {
@@ -16122,7 +16114,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																					{
 																						ctor: '::',
 																						_0: _elm_lang$html$Html$text(
-																							A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.hakusan.title')),
+																							A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.kumu.title')),
 																						_1: {ctor: '[]'}
 																					}),
 																				_1: {
@@ -16143,7 +16135,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																							{
 																								ctor: '::',
 																								_0: _elm_lang$html$Html$text(
-																									A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.hakusan.address')),
+																									A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.kumu.address')),
 																								_1: {ctor: '[]'}
 																							}),
 																						_1: {ctor: '[]'}
@@ -16203,8 +16195,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																							},
 																							{
 																								ctor: '::',
-																								_0: _elm_lang$html$Html$text(
-																									A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.hakusan.detail')),
+																								_0: _elm_lang$html$Html$text(''),
 																								_1: {ctor: '[]'}
 																							}),
 																						_1: {
@@ -16246,7 +16237,17 @@ var _user$project$Pages_Schedule$content = function (model) {
 																										},
 																										{
 																											ctor: '::',
-																											_0: _elm_lang$html$Html$text(''),
+																											_0: _elm_lang$html$Html$text(
+																												A2(
+																													_elm_lang$core$Basics_ops['++'],
+																													'8am - 60',
+																													A2(
+																														_elm_lang$core$Basics_ops['++'],
+																														A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'),
+																														A2(
+																															_elm_lang$core$Basics_ops['++'],
+																															' ',
+																															A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.locations.kumu.detail'))))),
 																											_1: {ctor: '[]'}
 																										}),
 																									_1: {ctor: '[]'}
@@ -16314,7 +16315,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																}),
 															_1: {
 																ctor: '::',
-																_0: _elm_lang$html$Html$text('1,200円'),
+																_0: _elm_lang$html$Html$text('1,500円'),
 																_1: {ctor: '[]'}
 															}
 														}),
@@ -16337,24 +16338,47 @@ var _user$project$Pages_Schedule$content = function (model) {
 																		_0: _elm_lang$html$Html$text(
 																			A2(
 																				_elm_lang$core$Basics_ops['++'],
-																				A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.monthly'),
+																				A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.four'),
 																				': ')),
 																		_1: {ctor: '[]'}
 																	}),
 																_1: {
 																	ctor: '::',
-																	_0: _elm_lang$html$Html$text(
-																		A2(
-																			_elm_lang$core$Basics_ops['++'],
-																			'4 ',
-																			A2(
-																				_elm_lang$core$Basics_ops['++'],
-																				A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.classes'),
-																				' - 4,000円'))),
+																	_0: _elm_lang$html$Html$text('5,000円'),
 																	_1: {ctor: '[]'}
 																}
 															}),
-														_1: {ctor: '[]'}
+														_1: {
+															ctor: '::',
+															_0: A2(
+																_elm_lang$html$Html$p,
+																{
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Attributes$class('monthly'),
+																	_1: {ctor: '[]'}
+																},
+																{
+																	ctor: '::',
+																	_0: A2(
+																		_elm_lang$html$Html$strong,
+																		{ctor: '[]'},
+																		{
+																			ctor: '::',
+																			_0: _elm_lang$html$Html$text(
+																				A2(
+																					_elm_lang$core$Basics_ops['++'],
+																					A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.eight'),
+																					': ')),
+																			_1: {ctor: '[]'}
+																		}),
+																	_1: {
+																		ctor: '::',
+																		_0: _elm_lang$html$Html$text('8,000円'),
+																		_1: {ctor: '[]'}
+																	}
+																}),
+															_1: {ctor: '[]'}
+														}
 													}
 												}),
 											_1: {ctor: '[]'}
@@ -18226,12 +18250,12 @@ var _user$project$Pages_Contact$content = function (model) {
 																_elm_lang$html$Html$a,
 																{
 																	ctor: '::',
-																	_0: _elm_lang$html$Html_Attributes$href('mailto:miki@ahimsayoga.jp'),
+																	_0: _elm_lang$html$Html_Attributes$href('mailto:hello@ahimsayoga.jp'),
 																	_1: {ctor: '[]'}
 																},
 																{
 																	ctor: '::',
-																	_0: _elm_lang$html$Html$text('miki@ahimsayoga.jp'),
+																	_0: _elm_lang$html$Html$text('hello@ahimsayoga.jp'),
 																	_1: {ctor: '[]'}
 																}),
 															_1: {ctor: '[]'}

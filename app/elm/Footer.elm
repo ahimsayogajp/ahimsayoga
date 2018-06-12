@@ -22,9 +22,9 @@ render_footer model =
                         ]
                     ]
                     , div [ class "cta" ]
-                    [ H.a [ href "mailto:miki@ahimsayoga.jp" ]
+                    [ H.a [ href "mailto:hello@ahimsayoga.jp" ]
                         [ H.i [ class "fa fa-envelope" ]
-                        [] ,text "miki@ahimsayoga.jp"
+                        [] ,text "hello@ahimsayoga.jp"
                         ]
                     ]
                     , H.nav [ class "nav social-nav footer-social-nav" ]

@@ -52,23 +52,19 @@
     },
     "locations" : {
       "title" : "Locations",
-      "ahimsa" : {
+      "ahimsa": {
         "title": "Ahimsa Center",
-        "address": "2 Chome 1-24, Ishibiki, Kanazawa"
-      },
-      "takigahara": {
-        "title": "Takigahara Farm",
-        "address": "Takigaharamachi O-66, Komatsu",
-        "detail": "Sat / Sun once monthly"
+        "address": "Tei 41-2, Wasadanimachi, Nomi",
+        "detail": "Opening Summer 2018"
       },
       "kiboagaoka": {
         "title": "Kibogaoka Community Center",
         "address": "1-91 Kibogaoka, Komatsu"
       },
-      "hakusan": {
-        "title": "Hakusan Center",
-        "address": "Wasadanimachi, Nomi",
-        "detail": "Opening Summer 2018"
+      "kumu": {
+        "title": "KUMU Kanazawa - The Share Hotels",
+        "address": "2−40, Kamitsutsumicho, Kanazawa",
+        "detail": "(Every 2nd week)"
       }
     },
     "days": {
@@ -86,7 +82,8 @@
       "classes": "classes",
       "mins": "mins",
       "dropin": "Drop-in",
-      "monthly": "Monthly"
+      "four": "4 Class Ticket",
+      "eight": "8 Class Ticket"
     }
   },
   "instructors": {
@@ -102,9 +99,9 @@
     "location": {
       "title": "Ahimsa Center",
       "address": {
-        "line1": "2 Chome−1-24",
-        "line2": "Ishibiki, Kanazawa",
-        "line3": "Ishikawa Prefecture, 〒920-0935"
+        "line1": "Tei 41-2",
+        "line2": "Wasadanimachi, Nomi",
+        "line3": "Ishikawa Prefecture, 〒923-1208"
       }
     }
   },
