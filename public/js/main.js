@@ -15838,7 +15838,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																			_elm_lang$html$Html$a,
 																			{
 																				ctor: '::',
-																				_0: _elm_lang$html$Html_Attributes$href('https://goo.gl/maps/qSmCTFHxpH22'),
+																				_0: _elm_lang$html$Html_Attributes$href('https://goo.gl/maps/t387t39YMTr'),
 																				_1: {ctor: '[]'}
 																			},
 																			{
@@ -16108,7 +16108,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																					_elm_lang$html$Html$a,
 																					{
 																						ctor: '::',
-																						_0: _elm_lang$html$Html_Attributes$href('https://goo.gl/maps/do3JngQWFTN2'),
+																						_0: _elm_lang$html$Html_Attributes$href('https://goo.gl/maps/232bJgSKMUA2'),
 																						_1: {ctor: '[]'}
 																					},
 																					{
