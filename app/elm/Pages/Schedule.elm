@@ -145,10 +145,10 @@ content model =
                         H.p [class "monthly"] [
                             H.strong [] [text ((t model.translations "schedule.pricing.four") ++ ": ")],
                             text ("5,000円")
-                        ],
-                        H.p [class "monthly"] [
-                            H.strong [] [text ((t model.translations "schedule.pricing.eight") ++ ": ")],
-                            text ("8,000円")
+                        -- ],
+                        -- H.p [class "monthly"] [
+                        --     H.strong [] [text ((t model.translations "schedule.pricing.eight") ++ ": ")],
+                        --     text ("8,000円")
                         ]
                     ]
                 ]

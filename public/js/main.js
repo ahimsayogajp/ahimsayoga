@@ -16348,37 +16348,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																	_1: {ctor: '[]'}
 																}
 															}),
-														_1: {
-															ctor: '::',
-															_0: A2(
-																_elm_lang$html$Html$p,
-																{
-																	ctor: '::',
-																	_0: _elm_lang$html$Html_Attributes$class('monthly'),
-																	_1: {ctor: '[]'}
-																},
-																{
-																	ctor: '::',
-																	_0: A2(
-																		_elm_lang$html$Html$strong,
-																		{ctor: '[]'},
-																		{
-																			ctor: '::',
-																			_0: _elm_lang$html$Html$text(
-																				A2(
-																					_elm_lang$core$Basics_ops['++'],
-																					A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.eight'),
-																					': ')),
-																			_1: {ctor: '[]'}
-																		}),
-																	_1: {
-																		ctor: '::',
-																		_0: _elm_lang$html$Html$text('8,000円'),
-																		_1: {ctor: '[]'}
-																	}
-																}),
-															_1: {ctor: '[]'}
-														}
+														_1: {ctor: '[]'}
 													}
 												}),
 											_1: {ctor: '[]'}
