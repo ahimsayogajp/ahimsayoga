@@ -54,7 +54,7 @@
       "title" : "Locations",
       "ahimsa": {
         "title": "Ahimsa Center",
-        "address": "Tei 41-2, Wasadanimachi, Nomi",
+        "address": "Tei 40-2, Wasadanimachi, Nomi",
         "detail": "Opening Summer 2018"
       },
       "kiboagaoka": {
@@ -99,7 +99,7 @@
     "location": {
       "title": "Ahimsa Center",
       "address": {
-        "line1": "Tei 41-2",
+        "line1": "Tei 40-2",
         "line2": "Wasadanimachi, Nomi",
         "line3": "Ishikawa Prefecture, 〒923-1208"
       }
