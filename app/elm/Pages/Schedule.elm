@@ -124,9 +124,9 @@ content model =
                     , H.td [ class "highlight" ]
                         [ text "" ]
                     , H.td [ class "highlight" ]
-                        [ text "" ]
-                    , H.td [ class "highlight" ]
                         [ text ("6pm - 60" ++ (t model.translations "schedule.pricing.mins") ++ " " ++ t model.translations "schedule.locations.kumu.detail") ]
+                    , H.td [ class "highlight" ]
+                        [ text "" ]
                     ]
                     ]
                 ],
