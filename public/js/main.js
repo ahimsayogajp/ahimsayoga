@@ -16240,7 +16240,7 @@ var _user$project$Pages_Schedule$content = function (model) {
 																											_0: _elm_lang$html$Html$text(
 																												A2(
 																													_elm_lang$core$Basics_ops['++'],
-																													'8am - 60',
+																													'6pm - 60',
 																													A2(
 																														_elm_lang$core$Basics_ops['++'],
 																														A2(_ChristophP$elm_i18next$I18Next$t, model.translations, 'schedule.pricing.mins'),
